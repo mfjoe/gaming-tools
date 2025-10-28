@@ -185,9 +185,9 @@
       /* Breadcrumb Navigation */
       .breadcrumb {
         background: var(--white);
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         border-bottom: 1px solid #e5e7eb;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08),
           0 2px 10px rgba(0, 0, 0, 0.06);
       }
@@ -216,7 +216,7 @@
         text-decoration: none;
         transition: all 0.3s ease;
         border-radius: 6px;
-        padding: 0.25rem 0.5rem;
+        padding: 0.0rem 0.5rem;
       }
 
       .breadcrumb-link:hover {
@@ -1470,177 +1470,16 @@
         <nav class="breadcrumb-list" aria-label="Breadcrumb">
           <div class="breadcrumb-item">
             <a href="../../" class="breadcrumb-link logo-link">
-              <svg
-                width="120"
-                height="20"
-                viewBox="0 0 240 80"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <!-- Digital/Tech Anvil with Crossed Hammers -->
-                <g transform="translate(15, 15)">
-                  <!-- Digital Anvil (geometric/tech style) -->
-                  <path
-                    d="M 15 35 L 12 40 L 48 40 L 45 35 Z"
-                    fill="#1E293B"
-                    stroke="#0066FF"
-                    stroke-width="0.5"
-                  />
-                  <rect
-                    x="18"
-                    y="30"
-                    width="24"
-                    height="5"
-                    fill="#334155"
-                    rx="1"
-                  />
-                  <rect x="16" y="28" width="28" height="2" fill="#475569" />
-                  <!-- Tech pattern on anvil -->
-                  <line
-                    x1="20"
-                    y1="32"
-                    x2="40"
-                    y2="32"
-                    stroke="#0066FF"
-                    stroke-width="0.5"
-                    opacity="0.6"
-                  />
-                  <line
-                    x1="22"
-                    y1="34"
-                    x2="38"
-                    y2="34"
-                    stroke="#00D4AA"
-                    stroke-width="0.5"
-                    opacity="0.6"
-                  />
-                  <!-- Crossed Hammers (geometric style) -->
-                  <!-- Left hammer -->
-                  <g transform="rotate(-30 30 25)">
-                    <rect
-                      x="28"
-                      y="15"
-                      width="4"
-                      height="18"
-                      fill="#0066FF"
-                      rx="0.5"
-                    />
-                    <path
-                      d="M 25 12 L 35 12 L 36 16 L 24 16 Z"
-                      fill="#0052CC"
-                    />
-                    <rect x="24" y="13" width="2" height="2" fill="#00D4AA" />
-                    <rect x="34" y="13" width="2" height="2" fill="#00D4AA" />
-                  </g>
-                  <!-- Right hammer -->
-                  <g transform="rotate(30 30 25)">
-                    <rect
-                      x="28"
-                      y="15"
-                      width="4"
-                      height="18"
-                      fill="#0066FF"
-                      rx="0.5"
-                    />
-                    <path
-                      d="M 25 12 L 35 12 L 36 16 L 24 16 Z"
-                      fill="#0052CC"
-                    />
-                    <rect x="24" y="13" width="2" height="2" fill="#00D4AA" />
-                    <rect x="34" y="13" width="2" height="2" fill="#00D4AA" />
-                  </g>
-                  <!-- Digital Fire/Energy (geometric flames) -->
-                  <path
-                    d="M 28 10 L 30 5 L 31 8 L 33 3 L 33 10 L 31 8 L 29 11 Z"
-                    fill="#FF6B35"
-                    opacity="0.9"
-                  />
-                  <path
-                    d="M 26 12 L 27 9 L 28 11 L 29 8 L 29 13 Z"
-                    fill="#FFA500"
-                    opacity="0.8"
-                  />
-                  <path
-                    d="M 31 12 L 32 9 L 33 11 L 34 8 L 34 13 Z"
-                    fill="#FFA500"
-                    opacity="0.8"
-                  />
-                  <!-- Tech sparks (pixels) -->
-                  <rect
-                    x="12"
-                    y="20"
-                    width="2"
-                    height="2"
-                    fill="#00D4AA"
-                    opacity="0.8"
-                  />
-                  <rect
-                    x="46"
-                    y="20"
-                    width="2"
-                    height="2"
-                    fill="#00D4AA"
-                    opacity="0.8"
-                  />
-                  <rect
-                    x="10"
-                    y="25"
-                    width="1.5"
-                    height="1.5"
-                    fill="#FFD700"
-                    opacity="0.7"
-                  />
-                  <rect
-                    x="48"
-                    y="25"
-                    width="1.5"
-                    height="1.5"
-                    fill="#FFD700"
-                    opacity="0.7"
-                  />
-                </g>
-                <!-- Text: Forge -->
-                <text
-                  x="75"
-                  y="45"
-                  font-family="Inter, system-ui, -apple-system, sans-serif"
-                  font-size="28"
-                  font-weight="800"
-                  fill="#0A0E27"
-                >
-                  Forge
-                </text>
-                <!-- Text: APIs -->
-                <text
-                  x="150"
-                  y="45"
-                  font-family="Inter, system-ui, -apple-system, sans-serif"
-                  font-size="28"
-                  font-weight="400"
-                  fill="#6B7280"
-                >
-                  APIs
-                </text>
-                <!-- Tagline -->
-                <text
-                  x="75"
-                  y="63"
-                  font-family="Inter, system-ui, -apple-system, sans-serif"
-                  font-size="9"
-                  fill="#9CA3AF"
-                  letter-spacing="0.5"
-                >
-                  PRODUCTION-READY APIS
-                </text>
-              </svg>
+              <img src="../../assets/images/logo.svg" alt="Logo" style="height: 80px; width: auto;" />
             </a>
           </div>
           <div class="breadcrumb-item">
             <a href="../" class="breadcrumb-link"
-              >Gaming Calculators</a
+              >GAMING CALCULATORS</a
             >
           </div>
           <div class="breadcrumb-item">
-            <span class="breadcrumb-current">Robux Calculator</span>
+            <span class="breadcrumb-current">ROBUX CALCULATOR</span>
           </div>
         </nav>
       </div>
@@ -1746,13 +1585,14 @@
             <div class="input-group">
               <label class="input-label" for="robux-input">Robux</label>
               <input
-                type="number"
-                id="robux-input"
-                class="calculator-input"
-                placeholder="Enter Robux"
-                min="0"
-                step="1"
-              />
+              type="number"
+              id="robux-input"
+              class="calculator-input"
+              placeholder="Enter Robux"
+              min="0"
+              step="1"
+              aria-label="Robux amount input"
+            />
             </div>
 
             <div class="conversion-arrow">⇄</div>
@@ -1763,13 +1603,14 @@
                 <span id="active-currency-name">USD ($)</span></label
               >
               <input
-                type="number"
-                id="usd-input"
-                class="calculator-input"
-                placeholder="Enter USD"
-                min="0"
-                step="0.01"
-              />
+              type="number"
+              id="usd-input"
+              class="calculator-input"
+              placeholder="Enter USD"
+              min="0"
+              step="0.01"
+              aria-label="Currency amount input"
+            />
             </div>
           </div>
 
@@ -2636,11 +2477,11 @@
 
       // Exchange rates - Roblox uses tiered pricing, not flat rates
       const RATES = {
-        player: 0.00998,        // Average web purchase rate ($4.99/500 Robux)
+        player: 0.0125,         // Correct base player rate  // Average web purchase rate ($4.99/500 Robux)
         devex_old: 0.0035,      // DevEx rate before Sept 5, 2025 10am PT
         devex_new: 0.0038,      // DevEx rate after Sept 5, 2025 10am PT
         devex: 0.0038,          // Default to new rate for current earnings
-        marketplace: 0.00266,   // After 30% marketplace fee: 0.0038 × 0.7 = 0.00266
+        marketplace: 0.00245,   // After 30% marketplace fee: 0.0035 × 0.7 = 0.00245   // After 30% marketplace fee: 0.0038 × 0.7 = 0.00266
         marketplace_old: 0.00245 // Old rate after 30% fee: 0.0035 × 0.7 = 0.00245
       };
 
@@ -2665,23 +2506,28 @@
       };
 
       // Default to web pricing (best value for users)
-      const PACKAGE_PRICES = WEB_PACKAGE_PRICES;
+      let PACKAGE_PRICES = {...WEB_PACKAGE_PRICES};
 
       // Function to get the best package price for a given Robux amount
       function getBestPackagePrice(robuxAmount) {
-        const packages = Object.keys(PACKAGE_PRICES).map(Number).sort((a, b) => a - b);
-        
-        // If exact package match, return that price
-        if (PACKAGE_PRICES[robuxAmount]) {
-          return PACKAGE_PRICES[robuxAmount];
-        }
-        
-        // Find the smallest package that provides enough Robux
-        for (const pkg of packages) {
-          if (pkg >= robuxAmount) {
-            return PACKAGE_PRICES[pkg];
-          }
-        }
+  // Handle zero or negative amounts
+  if (robuxAmount <= 0) {
+    return 0;
+  }
+  
+  const packages = Object.keys(PACKAGE_PRICES).map(Number).sort((a, b) => a - b);
+  
+  // If exact package match, return that price
+  if (PACKAGE_PRICES[robuxAmount]) {
+    return PACKAGE_PRICES[robuxAmount];
+  }
+  
+  // Find the smallest package that provides enough Robux
+  for (const pkg of packages) {
+    if (pkg >= robuxAmount) {
+      return PACKAGE_PRICES[pkg];
+    }
+  }
         
         // If amount exceeds all single packages, calculate based on best rate
         const largestPackage = packages[packages.length - 1];
@@ -2746,7 +2592,31 @@
           "input",
           SecurityManager.debounce(handleUsdInput, 100)
         );
-        copyBtn.addEventListener("click", copyResult);
+        copyBtn.addEventListener("click", async () => {
+          const result = usdInput.value;
+          
+          try {
+            await navigator.clipboard.writeText(result);
+            
+            // Show feedback
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = "Copied!";
+            copyBtn.style.background = "#10b981"; // Green
+            
+            setTimeout(() => {
+              copyBtn.textContent = originalText;
+              copyBtn.style.background = ""; // Reset to original
+            }, 2000);
+            
+          } catch (err) {
+            console.error("Failed to copy:", err);
+            // Fallback for older browsers
+            copyBtn.textContent = "Copy Failed";
+            setTimeout(() => {
+              copyBtn.textContent = "Copy Result";
+            }, 2000);
+          }
+        });
         clearBtn.addEventListener("click", clearInputs);
         currencySelect.addEventListener("change", handleCurrencyChange);
 
@@ -2763,53 +2633,20 @@
         console.log("Adding click event listener to conversion arrow");
 
         conversionArrow.addEventListener("click", (e) => {
-          console.log("Conversion arrow clicked!");
+          console.log("Conversion arrow clicked - swapping values!");
           e.preventDefault();
 
-          // Get the input groups using more reliable selectors
-          const allInputGroups = document.querySelectorAll(".input-group");
-
-          console.log("Found input groups:", allInputGroups.length);
-
-          if (allInputGroups.length >= 2) {
-            console.log("Swapping input field positions");
-
-            // Get the parent container
-            const conversionSection = document.querySelector(
-              ".conversion-section"
-            );
-
-            if (conversionSection) {
-              // Always swap the first two input groups (regardless of their current order)
-              const firstGroup = allInputGroups[0];
-              const secondGroup = allInputGroups[1];
-
-              console.log("First group:", firstGroup);
-              console.log("Second group:", secondGroup);
-
-              // Get the arrow element to preserve its position
-              const arrowElement = document.querySelector(".conversion-arrow");
-
-              // Remove both groups from their current positions
-              firstGroup.remove();
-              secondGroup.remove();
-
-              // Insert them back in swapped order, ensuring arrow stays in the middle
-              // Insert second group first (before arrow)
-              conversionSection.insertBefore(secondGroup, arrowElement);
-              // Insert first group last (after arrow)
-              conversionSection.insertBefore(
-                firstGroup,
-                arrowElement.nextSibling
-              );
-
-              console.log("Fields swapped successfully");
-            }
-          } else {
-            console.error("Could not find enough input groups to swap");
-          }
-
-          console.log("Swap completed");
+          // Simply swap the input values
+          const robuxValue = robuxInput.value;
+          const usdValue = usdInput.value;
+          
+          robuxInput.value = usdValue.replace(/[^0-9.]/g, ''); // Remove currency symbols
+          usdInput.value = robuxValue;
+          
+          // Trigger recalculation
+          handleRobuxInput();
+          
+          console.log("Values swapped");
         });
       } else {
         console.error("Conversion arrow element not found!");
