@@ -2045,22 +2045,43 @@
         }
       }
 
-      /* Breadcrumb Styles */
+      /* Breadcrumb Styles - Minecraft Themed */
       .breadcrumb {
-        background: var(--light-gray);
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(0, 180, 100, 0.15);
-        margin-bottom: 1rem;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
-          0 2px 10px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(180deg, #91c848 0%, #5a7c2f 100%);
+        padding: 1rem 0;
+        border-bottom: 4px solid var(--dirt-brown);
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3),
+          0 8px 16px rgba(0, 0, 0, 0.3);
+        position: relative;
+        image-rendering: pixelated;
+      }
+
+      .breadcrumb::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: repeating-linear-gradient(
+          90deg,
+          #76ee00 0px,
+          #76ee00 8px,
+          #91c848 8px,
+          #91c848 16px
+        );
       }
 
       .breadcrumb-list {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        font-size: 0.9rem;
-        color: var(--gray);
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        color: var(--white);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-weight: 700;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
       }
 
       .breadcrumb-item {
@@ -2069,48 +2090,85 @@
       }
 
       .breadcrumb-item:not(:last-child)::after {
-        content: ">";
-        margin-left: 0.5rem;
-        color: var(--gray);
+        content: "▶";
+        margin-left: 0.75rem;
+        color: var(--accent);
+        font-size: 0.9rem;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+        filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
       }
 
       .breadcrumb-link {
-        color: var(--secondary);
+        color: var(--white);
         text-decoration: none;
-        transition: all 0.3s ease;
-        border-radius: 6px;
-        padding: 0.0rem 0.5rem;
+        transition: all 0.2s ease;
+        border-radius: 0;
+        padding: 0.5rem 0.75rem;
+        background: rgba(0, 0, 0, 0.2);
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        font-weight: 700;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+        image-rendering: pixelated;
+        position: relative;
       }
 
       .breadcrumb-link:hover {
-        color: var(--highlight);
-        background: rgba(0, 180, 100, 0.08);
-        box-shadow: 0 0 10px rgba(0, 180, 100, 0.15);
-        transform: translateY(-1px);
+        background: var(--dirt-brown);
+        border-color: var(--accent);
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4),
+          0 0 12px rgba(255, 215, 0, 0.4);
+      }
+
+      .breadcrumb-link:active {
+        transform: translate(0, 0);
+        box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
       }
 
       .logo-link {
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        font-weight: 600;
+        font-weight: 800;
+        padding: 0.4rem 0.75rem;
+        background: rgba(0, 0, 0, 0.3);
+        border: 3px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
       }
 
-      .logo-link svg {
-        transition: all 0.3s ease;
+      .logo-link:hover {
+        background: rgba(0, 0, 0, 0.4);
+        border-color: var(--diamond-blue);
+        box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5),
+          0 0 16px rgba(92, 219, 213, 0.5);
       }
 
-      .logo-link:hover svg {
-        transform: scale(1.05);
+      .logo-link svg,
+      .logo-link img {
+        width: auto;
+        height: 60px;
+        flex-shrink: 0;
+        filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.5));
+        image-rendering: pixelated;
       }
 
       .logo-text {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        text-transform: uppercase;
       }
 
       .breadcrumb-current {
-        color: var(--dark);
-        font-weight: 500;
+        color: var(--accent);
+        font-weight: 800;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6),
+          0 0 10px rgba(255, 215, 0, 0.8);
+        padding: 0.5rem 0.75rem;
+        background: rgba(139, 69, 19, 0.5);
+        border-radius: 0;
+        border: 3px solid var(--accent);
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4),
+          inset 0 0 8px rgba(255, 215, 0, 0.3);
       }
 
       @media (max-width: 768px) {
