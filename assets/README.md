@@ -292,7 +292,7 @@ const calc = new CurrencyCalculator({
 
 ## License
 
-This module is part of the ForgeAPI gaming calculators project.
+This module is part of the Gaming Tools gaming calculators project.
 
 ## Support
 

@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Gaming Tools</title>
+    <meta name="description" content="Cookie policy for Gaming Tools. Learn about the cookies we use and how to manage them.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+            padding-top: 80px;
+        }
+
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --dark: #1e293b;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+        }
+
+        /* Navigation - matches gaming-tools.co.uk style */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            height: 80px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            gap: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--dark);
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .legal-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .legal-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .legal-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--dark);
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cookie-table th {
+            background: #4a5568;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cookie-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+
+        .cookie-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cookie-table tbody tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        .cookie-type {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cookie-type.essential {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .cookie-type.analytics {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .cookie-type.advertising {
+            background: #fce7f3;
+            color: #9f1239;
+        }
+
+        .info-box {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1f2e;
+            color: #9ca3af;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h4 {
+            color: #e5e7eb;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: #9ca3af;
+        }
+
+        .footer-column a:hover {
+            color: #60a5fa;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            nav {
+                height: 70px;
+            }
+
+            .navbar-logo {
+                height: 50px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .legal-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .legal-header p {
+                font-size: 1rem;
+            }
+
+            .content-section {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cookie-table {
+                font-size: 0.9rem;
+            }
+
+            .cookie-table th,
+            .cookie-table td {
+                padding: 8px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/assets/images/logo.svg" alt="Gaming Tools Logo" class="navbar-logo">
+            </a>
+            
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="legal-header">
+        <h1>Cookie Policy</h1>
+        <p>Understanding cookies on Gaming Tools</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content-section">
+            <div class="highlight-box">
+                <p><strong>Quick Summary:</strong> We use cookies to make our website work properly, understand how visitors use our site (Google Analytics), and display relevant advertisements (Google AdSense). You can control or delete cookies through your browser settings.</p>
+            </div>
+
+            <p><strong>Last Updated:</strong> January 15, 2025</p>
+
+            <p>This Cookie Policy explains what cookies are, how we use them on gaming-tools.co.uk, and how you can control them. This policy should be read together with our <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.</p>
+
+            <h2>1. What Are Cookies?</h2>
+
+            <p>Cookies are small text files that are placed on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners.</p>
+
+            <h3>How Cookies Work</h3>
+            <p>When you visit our website:</p>
+            <ul>
+                <li>Your web browser downloads cookies and stores them on your device</li>
+                <li>Cookies contain information like your preferences, session data, or unique identifiers</li>
+                <li>When you return to the website, your browser sends the cookies back to the server</li>
+                <li>This allows the website to "remember" information about your visit</li>
+            </ul>
+
+            <h3>Types of Cookies by Duration</h3>
+            <p><strong>Session cookies:</strong> These are temporary cookies that expire when you close your browser. They help websites remember what you're doing as you navigate between pages.</p>
+
+            <p><strong>Persistent cookies:</strong> These cookies remain on your device for a set period (or until you delete them). They remember your preferences across multiple visits.</p>
+
+            <h3>Types of Cookies by Origin</h3>
+            <p><strong>First-party cookies:</strong> Set by the website you're visiting (in this case, gaming-tools.co.uk). We have control over these cookies.</p>
+
+            <p><strong>Third-party cookies:</strong> Set by external services we use (like Google Analytics or Google AdSense). These are controlled by those third parties.</p>
+
+            <h2>2. Cookies We Use</h2>
+
+            <p>We use the following categories of cookies on our website:</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Purpose</th>
+                        <th>Can You Block?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="cookie-type essential">Essential</span></td>
+                        <td>Required for the website to function properly. These enable basic features like page navigation and access to secure areas.</td>
+                        <td>No - blocking these may prevent the site from working</td>
+                    </tr>
+                    <tr>
+                        <td><span class="cookie-type analytics">Analytics</span></td>
+                        <td>Help us understand how visitors interact with our website by collecting and reporting information anonymously.</td>
+                        <td>Yes - you can opt out through browser settings or Google's opt-out tools</td>
+                    </tr>
+                    <tr>
+                        <td><span class="cookie-type advertising">Advertising</span></td>
+                        <td>Used to deliver relevant advertisements and track advertising campaign performance.</td>
+                        <td>Yes - you can opt out of personalized ads through Google's settings</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Essential Cookies</h3>
+            <p>These cookies are necessary for our website to function and cannot be disabled without breaking core functionality.</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>cookieconsent_status</strong></td>
+                        <td>Remembers your cookie consent preferences so we don't ask repeatedly</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>session_id</strong></td>
+                        <td>Maintains your session as you navigate between pages</td>
+                        <td>Session (deleted when browser closes)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Analytics Cookies (Google Analytics)</h3>
+            <p>We use Google Analytics to understand how visitors use our website. This helps us improve our calculators and content. Google Analytics uses cookies to collect information such as:</p>
+
+            <ul>
+                <li>How many people visit our site</li>
+                <li>Which pages are most popular</li>
+                <li>How long visitors spend on each page</li>
+                <li>Which calculators are used most frequently</li>
+                <li>General location data (country/city level, not precise location)</li>
+                <li>Device type, browser, and operating system</li>
+            </ul>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>_ga</strong></td>
+                        <td>Distinguishes unique users by assigning a randomly generated number</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td><strong>_ga_[container-id]</strong></td>
+                        <td>Used to persist session state for Google Analytics 4</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td><strong>_gid</strong></td>
+                        <td>Distinguishes users and stores information about how you use the website</td>
+                        <td>24 hours</td>
+                    </tr>
+                    <tr>
+                        <td><strong>_gat</strong></td>
+                        <td>Used to throttle request rate to prevent overloading Google's servers</td>
+                        <td>1 minute</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Important:</strong> Google Analytics data is collected anonymously. We cannot identify individual users from this data.</p>
+
+            <h3>Advertising Cookies (Google AdSense)</h3>
+            <p>We use Google AdSense to display advertisements on our website. This is how we fund our free calculators. Google AdSense uses cookies to:</p>
+
+            <ul>
+                <li>Serve ads relevant to your interests</li>
+                <li>Limit the number of times you see an ad</li>
+                <li>Measure ad effectiveness</li>
+                <li>Prevent fraudulent clicks</li>
+                <li>Provide aggregate ad performance reports</li>
+            </ul>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>IDE</strong></td>
+                        <td>Used by Google DoubleClick to register and report user actions after viewing or clicking ads</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>test_cookie</strong></td>
+                        <td>Checks if the user's browser supports cookies</td>
+                        <td>15 minutes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>_gcl_au</strong></td>
+                        <td>Used by Google AdSense to experiment with advertisement efficiency</td>
+                        <td>3 months</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NID</strong></td>
+                        <td>Registers a unique ID that identifies a returning user's device for targeted advertising</td>
+                        <td>6 months</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DSID</strong></td>
+                        <td>Used for targeting purposes to build a profile of website visitor interests</td>
+                        <td>2 weeks</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <p><strong>Good to know:</strong> Google uses advertising cookies across millions of websites. This allows them to show you ads based on your interests across the internet, not just on our site.</p>
+            </div>
+
+            <h2>3. How We Use Cookies</h2>
+
+            <h3>Website Functionality</h3>
+            <p>We use essential cookies to:</p>
+            <ul>
+                <li>Remember your calculator preferences (if you've selected specific amounts)</li>
+                <li>Maintain your session as you navigate between calculators</li>
+                <li>Store your cookie consent preferences</li>
+                <li>Prevent security issues and protect against fraud</li>
+            </ul>
+
+            <h3>Performance and Analytics</h3>
+            <p>We use analytics cookies to:</p>
+            <ul>
+                <li>Understand which gaming calculators are most popular</li>
+                <li>Identify which pages need improvement</li>
+                <li>See how visitors navigate through our site</li>
+                <li>Detect and fix technical errors</li>
+                <li>Optimize page load times and performance</li>
+                <li>Understand our audience demographics (age ranges, general locations)</li>
+            </ul>
+
+            <h3>Advertising</h3>
+            <p>We use advertising cookies to:</p>
+            <ul>
+                <li>Display relevant advertisements that may interest you</li>
+                <li>Fund our free calculators through ad revenue</li>
+                <li>Measure how effective our advertising is</li>
+                <li>Control how often you see the same ad</li>
+                <li>Prevent fraudulent ad clicks</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>Important for Parents:</strong> Advertising cookies may track browsing across multiple websites. If children use your device to visit our site, consider using parental controls, private browsing modes, or opting out of personalized advertising.</p>
+            </div>
+
+            <h2>4. Third-Party Cookies</h2>
+
+            <p>Third-party cookies are set by external services we use on our website. We do not control these cookies, and they are subject to the third parties' own privacy policies.</p>
+
+            <h3>Google Analytics</h3>
+            <p><strong>Provider:</strong> Google LLC</p>
+            <p><strong>Purpose:</strong> Website analytics and performance monitoring</p>
+            <p><strong>Data collected:</strong> Anonymous usage statistics, page views, device information, general location</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+            <p><strong>Opt-out:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></p>
+
+            <h3>Google AdSense</h3>
+            <p><strong>Provider:</strong> Google LLC</p>
+            <p><strong>Purpose:</strong> Display and manage advertisements</p>
+            <p><strong>Data collected:</strong> Browsing behavior, ad interactions, device information, interests</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+            <p><strong>Opt-out:</strong> <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a></p>
+
+            <div class="info-box">
+                <p><strong>Note:</strong> When you opt out of personalized advertising, you'll still see ads, but they won't be based on your browsing history or interests.</p>
+            </div>
+
+            <h2>5. How to Control Cookies</h2>
+
+            <p>You have several options to control or delete cookies:</p>
+
+            <h3>Browser Settings</h3>
+            <p>Most web browsers allow you to control cookies through their settings. You can:</p>
+
+            <ul>
+                <li><strong>Block all cookies:</strong> Prevent websites from setting any cookies</li>
+                <li><strong>Block third-party cookies:</strong> Allow first-party cookies but block third-party tracking</li>
+                <li><strong>Delete existing cookies:</strong> Remove cookies already stored on your device</li>
+                <li><strong>Get notifications:</strong> Be alerted when websites try to set cookies</li>
+            </ul>
+
+            <p><strong>How to manage cookies in different browsers:</strong></p>
+
+            <div class="button-group">
+                <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener" class="btn btn-secondary">Chrome Instructions</a>
+                <a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" target="_blank" rel="noopener" class="btn btn-secondary">Firefox Instructions</a>
+                <a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target="_blank" rel="noopener" class="btn btn-secondary">Safari Instructions</a>
+                <a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener" class="btn btn-secondary">Edge Instructions</a>
+            </div>
+
+            <div class="warning-box">
+                <p><strong>Warning:</strong> Blocking all cookies may affect your experience on our website and other sites. Some features may not work properly, and you may need to re-enter information more frequently.</p>
+            </div>
+
+            <h3>Opt Out of Google Services</h3>
+
+            <p><strong>Google Analytics:</strong></p>
+            <ul>
+                <li>Install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></li>
+                <li>This prevents your data from being used by Google Analytics across all websites</li>
+            </ul>
+
+            <p><strong>Google Ads (AdSense):</strong></p>
+            <ul>
+                <li>Visit <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a> to opt out of personalized advertising</li>
+                <li>Use the <a href="http://www.aboutads.info/choices/" target="_blank" rel="noopener">Digital Advertising Alliance opt-out tool</a></li>
+                <li>Install browser extensions like uBlock Origin or Privacy Badger (note: this may block ads entirely, affecting our revenue)</li>
+            </ul>
+
+            <div class="button-group">
+                <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" class="btn btn-primary">Manage Google Ad Preferences</a>
+                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" class="btn btn-primary">Opt Out of Google Analytics</a>
+            </div>
+
+            <h3>Mobile Device Settings</h3>
+
+            <p><strong>iOS (iPhone/iPad):</strong></p>
+            <ol>
+                <li>Go to Settings → Safari</li>
+                <li>Toggle "Prevent Cross-Site Tracking" ON</li>
+                <li>Toggle "Block All Cookies" ON (if desired, but may break websites)</li>
+                <li>Tap "Advanced" → "Website Data" to view and delete stored data</li>
+            </ol>
+
+            <p><strong>Android:</strong></p>
+            <ol>
+                <li>Open Chrome browser</li>
+                <li>Tap the three dots menu → Settings</li>
+                <li>Tap "Site settings" → "Cookies"</li>
+                <li>Choose your cookie preferences</li>
+                <li>Go to "Site settings" → "All sites" to delete cookies</li>
+            </ol>
+
+            <h3>Do Not Track (DNT)</h3>
+            <p>Some browsers offer a "Do Not Track" (DNT) signal that requests websites not to track your browsing. However:</p>
+            <ul>
+                <li>There is no universal standard for how websites should respond to DNT</li>
+                <li>Many websites, including ours, do not currently respond to DNT signals</li>
+                <li>Third-party services (Google Analytics, AdSense) may not honor DNT</li>
+                <li>For effective tracking prevention, use the specific opt-out tools mentioned above</li>
+            </ul>
+
+            <h2>6. Impact of Blocking Cookies</h2>
+
+            <h3>What Still Works</h3>
+            <p>If you block cookies, our gaming calculators will still function. You can:</p>
+            <ul>
+                <li>Use all calculators (Robux, V-Bucks, Minecoins, etc.)</li>
+                <li>Read guides and educational content</li>
+                <li>Navigate the website normally</li>
+            </ul>
+
+            <h3>What May Not Work</h3>
+            <p>However, blocking cookies may affect:</p>
+            <ul>
+                <li><strong>Preference memory:</strong> We won't remember your calculator settings between visits</li>
+                <li><strong>Cookie consent:</strong> We'll ask about cookie preferences on every visit</li>
+                <li><strong>Ad personalization:</strong> You'll see generic ads instead of relevant ones</li>
+                <li><strong>Analytics:</strong> We won't be able to improve the site based on usage data</li>
+            </ul>
+
+            <h3>How Blocking Affects Us</h3>
+            <p>While we respect your right to block cookies, please understand:</p>
+            <ul>
+                <li><strong>Revenue impact:</strong> Ad revenue funds our free calculators. Blocking ads may make it harder to maintain the service</li>
+                <li><strong>Improvement limitations:</strong> Without analytics, we can't understand which calculators need improvement</li>
+                <li><strong>User experience:</strong> We can't optimize the site for your device or preferences</li>
+            </ul>
+
+            <h2>7. Children's Privacy and Cookies</h2>
+
+            <p>Our website is suitable for users of all ages, including children under 13. Regarding cookies and children:</p>
+
+            <ul>
+                <li><strong>We don't knowingly collect personal information from children</strong> through cookies or any other means</li>
+                <li><strong>Our calculators work without requiring any personal data input</strong></li>
+                <li><strong>Third-party cookies (Google) may track browsing behavior</strong> regardless of age</li>
+                <li><strong>Parents should review this policy</strong> and discuss cookie usage with their children</li>
+            </ul>
+
+            <h3>Recommendations for Parents</h3>
+            <p>To protect children's privacy online:</p>
+            <ul>
+                <li>Use parental control software that blocks tracking cookies</li>
+                <li>Enable private browsing mode when children use the internet</li>
+                <li>Opt out of personalized advertising (see instructions above)</li>
+                <li>Regularly delete cookies and browsing history from shared devices</li>
+                <li>Teach children about online privacy and safe browsing habits</li>
+                <li>Consider using kid-friendly browsers that automatically block trackers</li>
+            </ul>
+
+            <h2>8. International Users and Cookies</h2>
+
+            <h3>GDPR (European Union & UK)</h3>
+            <p>If you're in the EU or UK, you have specific rights under the General Data Protection Regulation (GDPR):</p>
+            <ul>
+                <li><strong>Consent required:</strong> We must obtain your consent before using non-essential cookies</li>
+                <li><strong>Right to withdraw:</strong> You can withdraw consent at any time through browser settings</li>
+                <li><strong>Right to access:</strong> You can request information about what data cookies have collected (though most is anonymous)</li>
+                <li><strong>Right to erasure:</strong> You can delete cookies and request deletion of associated data</li>
+            </ul>
+
+            <h3>CCPA (California, USA)</h3>
+            <p>California residents have rights under the California Consumer Privacy Act:</p>
+            <ul>
+                <li><strong>Right to know:</strong> What personal information is collected through cookies</li>
+                <li><strong>Right to opt-out:</strong> Opt out of the "sale" of personal information (though we don't sell data, third-party cookies may share it)</li>
+                <li><strong>Right to delete:</strong> Request deletion of personal information collected through cookies</li>
+            </ul>
+
+            <h3>Other Regions</h3>
+            <p>Regardless of location, you can:</p>
+            <ul>
+                <li>Control cookies through browser settings</li>
+                <li>Opt out of Google Analytics and personalized advertising</li>
+                <li>Contact us with privacy concerns</li>
+            </ul>
+
+            <h2>9. Cookie Updates and Changes</h2>
+
+            <p>We may update this Cookie Policy from time to time to reflect:</p>
+            <ul>
+                <li>Changes in cookie usage or new cookies we implement</li>
+                <li>Updates to third-party services (Google Analytics, AdSense)</li>
+                <li>Changes in privacy laws or regulations</li>
+                <li>New features or functionality on our website</li>
+            </ul>
+
+            <p>When we make changes:</p>
+            <ul>
+                <li>We'll update the "Last Updated" date at the top of this policy</li>
+                <li>Significant changes may be announced on our homepage</li>
+                <li>Continued use of our website constitutes acceptance of the updated policy</li>
+            </ul>
+
+            <h2>10. More Information About Cookies</h2>
+
+            <p>To learn more about cookies and online privacy:</p>
+
+            <ul>
+                <li><strong>All About Cookies:</strong> <a href="https://www.allaboutcookies.org/" target="_blank" rel="noopener">www.allaboutcookies.org</a></li>
+                <li><strong>Network Advertising Initiative:</strong> <a href="https://www.networkadvertising.org/" target="_blank" rel="noopener">www.networkadvertising.org</a></li>
+                <li><strong>Digital Advertising Alliance:</strong> <a href="http://www.aboutads.info/" target="_blank" rel="noopener">www.aboutads.info</a></li>
+                <li><strong>European Interactive Digital Advertising Alliance:</strong> <a href="http://www.youronlinechoices.eu/" target="_blank" rel="noopener">www.youronlinechoices.eu</a></li>
+                <li><strong>ICO (UK):</strong> <a href="https://ico.org.uk/for-the-public/online/cookies/" target="_blank" rel="noopener">ICO Cookies Guidance</a></li>
+            </ul>
+
+            <h2>11. Contact Us</h2>
+
+            <p>If you have questions about our use of cookies or this Cookie Policy, please contact us:</p>
+
+            <div class="highlight-box">
+                <p><strong>Gaming Tools</strong><br>
+                Email: <a href="mailto:privacy@gaming-tools.co.uk">privacy@gaming-tools.co.uk</a><br>
+                Website: <a href="https://gaming-tools.co.uk">https://gaming-tools.co.uk</a></p>
+            </div>
+
+            <p>We will respond to all legitimate inquiries within 30 days. For data protection inquiries from EU/UK residents, we will respond within the timeframes required by GDPR.</p>
+
+            <div class="last-updated">
+                <p>This Cookie Policy is effective as of January 15, 2025</p>
+                <p>Version 1.0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Gaming Calculators</h4>
+                <ul>
+                    <li><a href="/robux/">Robux Calculator</a></li>
+                    <li><a href="/vbucks/">V-Bucks Calculator</a></li>
+                    <li><a href="/minecoins/">Minecoins Calculator</a></li>
+                    <li><a href="/fifa-points/">FIFA Points Calculator</a></li>
+                    <li><a href="/cod-points/">COD Points Calculator</a></li>
+                    <li><a href="/apex-coins/">Apex Coins Calculator</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/guides/parents-guide.html">Parent's Guide</a></li>
+                    <li><a href="/guides/comparison.html">Currency Comparison</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="/cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Gaming Tools. Free gaming currency calculators. Not affiliated with any gaming companies.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (basic functionality)
+        document.getElementById('mobileMenuToggle')?.addEventListener('click', function() {
+            this.classList.toggle('active');
+            // Add mobile menu expansion logic if needed
+        });
+    </script>
+</body>
+</html>

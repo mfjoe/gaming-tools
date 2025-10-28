@@ -4,7 +4,7 @@
  * Optimized for SEO, performance, and user experience
  *
  * @version 1.0.0
- * @author ForgeAPI
+ * @author Gaming Tools
  */
 
 class CurrencyCalculator {

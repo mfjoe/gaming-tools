@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Gaming Tools</title>
+    <meta name="description" content="Terms of Service for Gaming Tools. Rules and guidelines for using our free gaming currency calculators.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+            padding-top: 80px;
+        }
+
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --dark: #1e293b;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+        }
+
+        /* Navigation - matches gaming-tools.co.uk style */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            height: 80px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            gap: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--dark);
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .legal-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .legal-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .legal-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--dark);
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1f2e;
+            color: #9ca3af;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h4 {
+            color: #e5e7eb;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: #9ca3af;
+        }
+
+        .footer-column a:hover {
+            color: #60a5fa;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            nav {
+                height: 70px;
+            }
+
+            .navbar-logo {
+                height: 50px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .legal-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .legal-header p {
+                font-size: 1rem;
+            }
+
+            .content-section {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/assets/images/logo.svg" alt="Gaming Tools Logo" class="navbar-logo">
+            </a>
+            
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="legal-header">
+        <h1>Terms of Service</h1>
+        <p>Rules and guidelines for using Gaming Tools</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content-section">
+            <div class="highlight-box">
+                <p><strong>Quick Summary:</strong> Our calculators are free educational tools. Use them responsibly. We're not affiliated with any gaming companies. All calculations are estimates. We're not liable for financial decisions you make based on our tools. By using our site, you agree to these terms.</p>
+            </div>
+
+            <p><strong>Last Updated:</strong> January 15, 2025</p>
+
+            <p>Welcome to Gaming Tools ("we," "our," or "us"). These Terms of Service ("Terms") govern your access to and use of gaming-tools.co.uk (the "Website") and all related services, features, and content.</p>
+
+            <p><strong>By accessing or using our Website, you agree to be bound by these Terms.</strong> If you do not agree to these Terms, please do not use our Website.</p>
+
+            <h2>1. Acceptance of Terms</h2>
+
+            <p>By accessing, browsing, or using Gaming Tools, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="/privacy.html">Privacy Policy</a>.</p>
+
+            <p>These Terms constitute a legally binding agreement between you and Gaming Tools. If you are using our Website on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
+
+            <h3>Age Requirements</h3>
+            <p>Our Website is intended for users of all ages, including children. However:</p>
+            <ul>
+                <li>If you are under 13 years old, you must have parental or guardian consent to use our Website</li>
+                <li>If you are between 13 and 18 years old, you should review these Terms with a parent or guardian</li>
+                <li>Parents and guardians are responsible for supervising their children's use of our Website</li>
+            </ul>
+
+            <h2>2. Description of Service</h2>
+
+            <p>Gaming Tools provides <strong>free online calculators</strong> for converting gaming currencies to real-world currency values. Our services include:</p>
+
+            <ul>
+                <li><strong>Gaming Currency Calculators:</strong> Tools for calculating the real-world value of virtual currencies including Robux, V-Bucks, Minecoins, FIFA Points, COD Points, and Apex Coins</li>
+                <li><strong>Educational Content:</strong> Guides, comparisons, and information about gaming currencies and in-game economies</li>
+                <li><strong>Informational Resources:</strong> Articles and resources to help users make informed decisions about gaming purchases</li>
+            </ul>
+
+            <h3>Service Limitations</h3>
+            <p>Please understand that:</p>
+            <ul>
+                <li>Our calculators provide <strong>estimates only</strong> and may not reflect exact official exchange rates</li>
+                <li>We do not sell, purchase, or exchange gaming currencies</li>
+                <li>We are not affiliated with any gaming companies or platforms</li>
+                <li>Exchange rates may change without notice</li>
+                <li>Regional pricing differences may affect accuracy</li>
+            </ul>
+
+            <h2>3. Use of the Website</h2>
+
+            <h3>Permitted Uses</h3>
+            <p>You may use our Website for lawful purposes, including:</p>
+            <ul>
+                <li>Calculating gaming currency conversions for personal use</li>
+                <li>Reading educational content about gaming currencies</li>
+                <li>Sharing calculator results with friends or family</li>
+                <li>Using our tools for budgeting gaming purchases</li>
+                <li>Accessing our content for educational or informational purposes</li>
+            </ul>
+
+            <h3>Prohibited Uses</h3>
+            <p>You agree <strong>NOT</strong> to:</p>
+            <ul>
+                <li><strong>Scrape or copy content:</strong> Use automated tools, bots, or scrapers to extract data from our Website</li>
+                <li><strong>Reverse engineer:</strong> Attempt to decompile, disassemble, or reverse engineer any part of our Website</li>
+                <li><strong>Commercial exploitation:</strong> Use our calculators or content for commercial purposes without permission</li>
+                <li><strong>Impersonate us:</strong> Falsely claim affiliation with Gaming Tools or gaming companies</li>
+                <li><strong>Circumvent security:</strong> Attempt to bypass security measures or access restricted areas</li>
+                <li><strong>Harm the service:</strong> Introduce viruses, malware, or other harmful code</li>
+                <li><strong>Overload systems:</strong> Make excessive requests that could disrupt or damage our infrastructure</li>
+                <li><strong>Violate laws:</strong> Use our Website in any way that violates applicable laws or regulations</li>
+                <li><strong>Harass others:</strong> Use our Website to harass, abuse, or harm others</li>
+                <li><strong>Infringe rights:</strong> Violate intellectual property rights or other proprietary rights</li>
+            </ul>
+
+            <h2>4. Intellectual Property Rights</h2>
+
+            <h3>Our Content</h3>
+            <p>All content on Gaming Tools, including but not limited to:</p>
+            <ul>
+                <li>Text, graphics, logos, and images</li>
+                <li>Calculator tools and functionality</li>
+                <li>Website design and layout</li>
+                <li>Software, code, and scripts</li>
+                <li>Articles, guides, and educational content</li>
+            </ul>
+
+            <p>...is owned by or licensed to Gaming Tools and is protected by copyright, trademark, and other intellectual property laws.</p>
+
+            <h3>Your License</h3>
+            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+            <ul>
+                <li>Access and use our Website for personal, non-commercial purposes</li>
+                <li>View and use our calculators for your own calculations</li>
+                <li>Read and share our educational content with proper attribution</li>
+            </ul>
+
+            <p>This license does not include the right to:</p>
+            <ul>
+                <li>Reproduce, distribute, or publicly display our content without permission</li>
+                <li>Modify, adapt, or create derivative works</li>
+                <li>Use our content for commercial purposes</li>
+                <li>Remove copyright notices or branding</li>
+            </ul>
+
+            <h3>Third-Party Trademarks</h3>
+            <p>Gaming currency names and related trademarks mentioned on our Website are the property of their respective owners:</p>
+            <ul>
+                <li>Robux® and Roblox® are trademarks of Roblox Corporation</li>
+                <li>V-Bucks® and Fortnite® are trademarks of Epic Games, Inc.</li>
+                <li>Minecraft® and Minecoins® are trademarks of Microsoft Corporation</li>
+                <li>FIFA® and EA Sports™ are trademarks of Electronic Arts Inc.</li>
+                <li>Call of Duty® is a trademark of Activision Publishing, Inc.</li>
+                <li>Apex Legends™ is a trademark of Electronic Arts Inc.</li>
+            </ul>
+
+            <p><strong>We use these names solely for descriptive and informational purposes.</strong> We are not affiliated with, endorsed by, or sponsored by any of these companies.</p>
+
+            <h2>5. Disclaimer of Warranties</h2>
+
+            <div class="warning-box">
+                <p><strong>IMPORTANT: READ THIS SECTION CAREFULLY</strong></p>
+            </div>
+
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR WEBSITE AND SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
+
+            <h3>No Warranty of Accuracy</h3>
+            <p>We make no warranties or representations about:</p>
+            <ul>
+                <li><strong>Accuracy of calculations:</strong> Our calculators provide estimates based on publicly available information. Actual exchange rates may differ.</li>
+                <li><strong>Completeness of information:</strong> Content on our Website may be incomplete or outdated</li>
+                <li><strong>Reliability:</strong> We do not guarantee uninterrupted or error-free service</li>
+                <li><strong>Currency to functionality:</strong> Exchange rates change frequently and we may not update immediately</li>
+            </ul>
+
+            <h3>No Financial Advice</h3>
+            <p><strong>We do not provide financial advice.</strong> Our calculators are educational tools only. You should:</p>
+            <ul>
+                <li>Verify all information with official gaming platform sources before making purchases</li>
+                <li>Consult with a parent, guardian, or financial advisor for significant purchases</li>
+                <li>Understand that gaming currency values can change without notice</li>
+                <li>Make your own independent decisions about gaming purchases</li>
+            </ul>
+
+            <h3>Third-Party Services</h3>
+            <p>We use third-party services (Google AdSense, Google Analytics) and are not responsible for:</p>
+            <ul>
+                <li>The availability or functionality of these services</li>
+                <li>The accuracy of information provided by third parties</li>
+                <li>Third-party privacy practices or data collection</li>
+                <li>Content of third-party advertisements displayed on our Website</li>
+            </ul>
+
+            <h2>6. Limitation of Liability</h2>
+
+            <div class="warning-box">
+                <p><strong>IMPORTANT LIABILITY LIMITATION</strong></p>
+            </div>
+
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, GAMING TOOLS AND ITS OWNERS, OPERATORS, EMPLOYEES, AND AFFILIATES SHALL NOT BE LIABLE FOR:</p>
+
+            <ul>
+                <li><strong>Direct damages:</strong> Any losses resulting from your use of our Website</li>
+                <li><strong>Indirect damages:</strong> Lost profits, lost data, business interruption, or other consequential damages</li>
+                <li><strong>Financial losses:</strong> Any financial decisions made based on our calculators or information</li>
+                <li><strong>Inaccurate information:</strong> Errors, omissions, or inaccuracies in our content or calculations</li>
+                <li><strong>Third-party actions:</strong> Actions or inactions of gaming companies, advertisers, or other third parties</li>
+                <li><strong>Service interruptions:</strong> Downtime, errors, or technical issues with our Website</li>
+                <li><strong>Security breaches:</strong> Unauthorized access to our systems (though we implement reasonable security measures)</li>
+            </ul>
+
+            <h3>Maximum Liability</h3>
+            <p>In jurisdictions that do not allow the exclusion of certain warranties or the limitation of liability for consequential damages, our liability shall be limited to the maximum extent permitted by law. In no event shall our total liability to you for all damages exceed £10 (ten British pounds sterling).</p>
+
+            <h3>Basis of the Bargain</h3>
+            <p>You acknowledge that we offer our services free of charge and that these limitations of liability are fundamental elements of the agreement between us. We would not be able to provide free services without these limitations.</p>
+
+            <h2>7. Indemnification</h2>
+
+            <p>You agree to indemnify, defend, and hold harmless Gaming Tools and its owners, operators, employees, and affiliates from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:</p>
+
+            <ul>
+                <li>Your use or misuse of our Website</li>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of any rights of another person or entity</li>
+                <li>Your violation of any applicable laws or regulations</li>
+                <li>Any financial decisions you make based on our calculators</li>
+                <li>Any disputes with gaming platforms or other users</li>
+            </ul>
+
+            <h2>8. External Links</h2>
+
+            <p>Our Website may contain links to external websites, including:</p>
+            <ul>
+                <li>Official gaming platform websites</li>
+                <li>Educational resources</li>
+                <li>Related tools and services</li>
+                <li>Social media platforms</li>
+            </ul>
+
+            <p><strong>We are not responsible for:</strong></p>
+            <ul>
+                <li>The content, accuracy, or practices of external websites</li>
+                <li>Privacy policies of linked websites</li>
+                <li>Products or services offered by external sites</li>
+                <li>Any damages resulting from your use of external websites</li>
+            </ul>
+
+            <p>Links to external websites do not constitute endorsement. You access external websites at your own risk and should review their terms and privacy policies.</p>
+
+            <h2>9. Advertising</h2>
+
+            <p>Our Website displays advertisements through Google AdSense. Please understand:</p>
+
+            <ul>
+                <li><strong>We do not control ad content:</strong> Google selects and displays advertisements</li>
+                <li><strong>Ads do not constitute endorsement:</strong> We do not endorse advertised products or services</li>
+                <li><strong>Third-party responsibility:</strong> Advertisers are responsible for their ad content and any transactions</li>
+                <li><strong>Ad-related issues:</strong> We are not liable for problems arising from advertisements or advertiser websites</li>
+                <li><strong>Children's safety:</strong> We cannot control which ads are shown. Parents should supervise children's browsing</li>
+            </ul>
+
+            <p>If you click on advertisements or make purchases through advertised links, you do so at your own risk.</p>
+
+            <h2>10. User-Generated Content</h2>
+
+            <p>Currently, our Website does not allow users to post comments, reviews, or other content. If we add such features in the future:</p>
+
+            <ul>
+                <li>You will retain ownership of content you post</li>
+                <li>You will grant us a license to use, display, and distribute your content</li>
+                <li>You will be responsible for the content you post</li>
+                <li>We reserve the right to remove any content that violates these Terms</li>
+                <li>We are not obligated to monitor or review user content</li>
+            </ul>
+
+            <h2>11. Privacy and Data Collection</h2>
+
+            <p>Your use of our Website is also governed by our <a href="/privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+
+            <p>Key privacy points:</p>
+            <ul>
+                <li><strong>No personal data collection:</strong> We do not collect names, emails, or other personal information</li>
+                <li><strong>Browser-based calculations:</strong> All calculator operations happen in your browser</li>
+                <li><strong>Cookies:</strong> We use cookies for analytics and advertising (see our <a href="/cookies.html">Cookie Policy</a>)</li>
+                <li><strong>Third-party services:</strong> Google Analytics and AdSense may collect data as described in our Privacy Policy</li>
+            </ul>
+
+            <h2>12. Modifications to Terms</h2>
+
+            <p>We reserve the right to modify these Terms at any time. When we make changes:</p>
+
+            <ul>
+                <li>We will update the "Last Updated" date at the top of this page</li>
+                <li>For significant changes, we may display a notice on our homepage</li>
+                <li>Continued use of our Website after changes constitutes acceptance of the modified Terms</li>
+                <li>If you do not agree to the changes, you must stop using our Website</li>
+            </ul>
+
+            <p>We encourage you to review these Terms periodically to stay informed about any changes.</p>
+
+            <h2>13. Modifications to Service</h2>
+
+            <p>We reserve the right to:</p>
+
+            <ul>
+                <li><strong>Modify or discontinue:</strong> Change, suspend, or discontinue any aspect of our Website at any time</li>
+                <li><strong>Update calculators:</strong> Modify calculator functionality, exchange rates, or features</li>
+                <li><strong>Remove content:</strong> Delete or modify content, guides, or resources</li>
+                <li><strong>Change availability:</strong> Restrict access to certain features or regions</li>
+            </ul>
+
+            <p>We are not liable for any modifications, suspensions, or discontinuation of our services.</p>
+
+            <h2>14. Termination</h2>
+
+            <h3>Your Rights</h3>
+            <p>You may stop using our Website at any time. Simply close your browser and do not return to our site.</p>
+
+            <h3>Our Rights</h3>
+            <p>We reserve the right to:</p>
+            <ul>
+                <li>Terminate or suspend your access to our Website immediately, without notice, for any reason</li>
+                <li>Block IP addresses or devices that violate these Terms</li>
+                <li>Refuse service to anyone for any reason at any time</li>
+            </ul>
+
+            <p>Reasons for termination may include but are not limited to:</p>
+            <ul>
+                <li>Violation of these Terms</li>
+                <li>Suspected fraudulent, abusive, or illegal activity</li>
+                <li>Excessive automated requests or scraping</li>
+                <li>Behavior that harms our Website or other users</li>
+            </ul>
+
+            <h3>Effect of Termination</h3>
+            <p>Upon termination:</p>
+            <ul>
+                <li>Your right to use our Website immediately ceases</li>
+                <li>Sections of these Terms that should survive termination will remain in effect</li>
+                <li>We are not liable for any damages resulting from termination</li>
+            </ul>
+
+            <h2>15. Governing Law and Jurisdiction</h2>
+
+            <p>These Terms shall be governed by and construed in accordance with the laws of England and Wales, without regard to conflict of law principles.</p>
+
+            <p>Any disputes arising from these Terms or your use of our Website shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+            <p>If you are a consumer in the European Union, you may also have rights under EU consumer protection laws.</p>
+
+            <h2>16. Dispute Resolution</h2>
+
+            <h3>Informal Resolution</h3>
+            <p>Before taking formal legal action, please contact us to attempt to resolve the dispute informally. Many disputes can be resolved quickly and efficiently through communication.</p>
+
+            <h3>Arbitration (If Applicable)</h3>
+            <p>For certain disputes, we may require binding arbitration instead of court proceedings. However, this depends on your jurisdiction and applicable consumer protection laws.</p>
+
+            <h3>Class Action Waiver</h3>
+            <p>To the extent permitted by law, you agree that disputes will be resolved individually, not as part of a class action or representative proceeding.</p>
+
+            <h2>17. Severability</h2>
+
+            <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction:</p>
+
+            <ul>
+                <li>That provision shall be modified to the minimum extent necessary to make it valid and enforceable</li>
+                <li>If modification is not possible, that provision shall be severed from these Terms</li>
+                <li>The remaining provisions shall continue in full force and effect</li>
+            </ul>
+
+            <h2>18. Waiver</h2>
+
+            <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision. A waiver of any breach of these Terms shall not constitute a waiver of any subsequent breach.</p>
+
+            <h2>19. Entire Agreement</h2>
+
+            <p>These Terms, together with our Privacy Policy and Cookie Policy, constitute the entire agreement between you and Gaming Tools regarding your use of our Website and supersede all prior agreements and understandings.</p>
+
+            <h2>20. Assignment</h2>
+
+            <p>You may not assign or transfer these Terms or any rights or obligations under these Terms without our prior written consent.</p>
+
+            <p>We may assign or transfer these Terms, in whole or in part, to any person or entity at any time without your consent, including in connection with a merger, acquisition, sale of assets, or by operation of law.</p>
+
+            <h2>21. Force Majeure</h2>
+
+            <p>We shall not be liable for any failure to perform our obligations under these Terms due to circumstances beyond our reasonable control, including but not limited to:</p>
+
+            <ul>
+                <li>Natural disasters (earthquakes, floods, fires, pandemics)</li>
+                <li>Government actions, laws, or regulations</li>
+                <li>War, terrorism, or civil unrest</li>
+                <li>Internet service provider failures</li>
+                <li>Power outages or equipment failures</li>
+                <li>Labor disputes or strikes</li>
+            </ul>
+
+            <h2>22. Contact Information</h2>
+
+            <p>If you have questions, concerns, or feedback about these Terms, please contact us:</p>
+
+            <div class="highlight-box">
+                <p><strong>Gaming Tools</strong><br>
+                Email: <a href="mailto:legal@gaming-tools.co.uk">legal@gaming-tools.co.uk</a><br>
+                Website: <a href="https://gaming-tools.co.uk">https://gaming-tools.co.uk</a></p>
+            </div>
+
+            <p>We will respond to all legitimate inquiries within a reasonable timeframe.</p>
+
+            <h2>23. Acknowledgment</h2>
+
+            <p>BY USING OUR WEBSITE, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE, UNDERSTAND THEM, AND AGREE TO BE BOUND BY THEM.</p>
+
+            <p>If you do not agree to these Terms, you must not use our Website.</p>
+
+            <div class="last-updated">
+                <p>These Terms of Service are effective as of January 15, 2025</p>
+                <p>Version 1.0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Gaming Calculators</h4>
+                <ul>
+                    <li><a href="/robux/">Robux Calculator</a></li>
+                    <li><a href="/vbucks/">V-Bucks Calculator</a></li>
+                    <li><a href="/minecoins/">Minecoins Calculator</a></li>
+                    <li><a href="/fifa-points/">FIFA Points Calculator</a></li>
+                    <li><a href="/cod-points/">COD Points Calculator</a></li>
+                    <li><a href="/apex-coins/">Apex Coins Calculator</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/guides/parents-guide.html">Parent's Guide</a></li>
+                    <li><a href="/guides/comparison.html">Currency Comparison</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="/cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Gaming Tools. Free gaming currency calculators. Not affiliated with any gaming companies.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (basic functionality)
+        document.getElementById('mobileMenuToggle')?.addEventListener('click', function() {
+            this.classList.toggle('active');
+            // Add mobile menu expansion logic if needed
+        });
+    </script>
+</body>
+</html>

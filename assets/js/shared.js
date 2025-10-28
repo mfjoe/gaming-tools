@@ -30,9 +30,9 @@ function loadGamingFooter() {
         </ul>
       </div>
 
-      <!-- Column 2 - Free Tools by Forge APIs -->
+      <!-- Column 2 - Resources & Guides -->
       <div class="footer-column">
-        <h4>Free Tools by Forge APIs</h4>
+        <h4>Resources & Guides</h4>
         <ul>
           <li><a href="/gst-calculator/">GST Calculator India</a></li>
           <li><a href="/gaming-calculators/">Gaming Currency Calculators</a></li>
@@ -41,7 +41,7 @@ function loadGamingFooter() {
           <li><a href="/">All Tools</a></li>
         </ul>
         <p style="margin-top: 1rem; font-size: 12px; color: #6b7280;">
-          Powered by Forge APIs
+          Gaming Tools - Free Currency Calculators
         </p>
       </div>
 
@@ -57,7 +57,7 @@ function loadGamingFooter() {
     </div>
 
     <div class="footer-bottom">
-      © 2024 Forge APIs. Gaming calculators are estimates only. Not affiliated with game companies.
+      © 2025 Gaming Tools. Gaming calculators are estimates only. Not affiliated with game companies.
     </div>
   `;
 
