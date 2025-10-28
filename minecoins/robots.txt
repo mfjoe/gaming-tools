@@ -1,0 +1,25 @@
+# robots.txt for gaming-tools.co.uk
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Specifically allow important pages (optional, but helps clarify)
+Allow: /gaming-calculators/
+Allow: /gaming-calculators/robux/
+Allow: /gaming-calculators/vbucks/
+Allow: /gaming-calculators/minecoins/
+Allow: /gaming-calculators/fifa-points/
+Allow: /gaming-calculators/cod-points/
+Allow: /gaming-calculators/apex-coins/
+Allow: /gaming-calculators/guides/
+
+# Disallow any admin or private directories (if you have any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://gaming-tools.co.uk/sitemap.xml
+
+# Crawl delay (optional - only add if you're experiencing server load issues)
+# Crawl-delay: 10
