@@ -2077,19 +2077,19 @@
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                 <div style="background: rgba(10, 10, 10, 0.8); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--secondary); backdrop-filter: blur(5px); border: 1px solid rgba(0, 180, 100, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">1,000 FIFA Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(0, 180, 100, 0.4);">$9.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(0, 180, 100, 0.4);" id="price-1000">$9.99 USD</p>
                 </div>
                 <div style="background: rgba(10, 10, 10, 0.8); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--secondary); backdrop-filter: blur(5px); border: 1px solid rgba(0, 180, 100, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">2,500 FIFA Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(0, 180, 100, 0.4);">$24.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(0, 180, 100, 0.4);" id="price-2500">$24.99 USD</p>
                 </div>
                 <div style="background: rgba(10, 10, 10, 0.8); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--secondary); backdrop-filter: blur(5px); border: 1px solid rgba(0, 180, 100, 0.3); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">5,000 FIFA Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(0, 180, 100, 0.4);">$49.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(0, 180, 100, 0.4);" id="price-5000">$49.99 USD</p>
                 </div>
                 <div style="background: rgba(10, 10, 10, 0.9); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent); box-shadow: 0 0 12px rgba(255, 215, 0, 0.3); backdrop-filter: blur(5px); border: 1px solid rgba(255, 215, 0, 0.4);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">12,000 FIFA Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: var(--accent); text-shadow: 0 2px 4px rgba(255, 215, 0, 0.5);">$99.99 USD <span style="font-size: 0.7rem; background: var(--accent); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 4px; margin-left: 0.25rem; font-weight: 900;">BEST</span></p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: var(--accent); text-shadow: 0 2px 4px rgba(255, 215, 0, 0.5);" id="price-12000">$99.99 USD <span style="font-size: 0.7rem; background: var(--accent); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 4px; margin-left: 0.25rem; font-weight: 900;">BEST</span></p>
                 </div>
               </div>
               <p style="margin: 1rem 0 0; font-size: 0.85rem; color: var(--gray); text-align: center; font-style: italic; font-family: -apple-system, sans-serif; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">
@@ -3349,6 +3349,29 @@
             currentCurrency
           );
           cell.textContent = `${symbol}${convertedValue.toFixed(2)}`;
+        });
+
+        // Update the Quick Conversion Guide cards
+        const guideCards = [
+          { id: 'price-1000', points: 1000 },
+          { id: 'price-2500', points: 2500 },
+          { id: 'price-5000', points: 5000 },
+          { id: 'price-12000', points: 12000 }
+        ];
+        
+        guideCards.forEach(card => {
+          const element = document.getElementById(card.id);
+          if (element) {
+            const usdPrice = calculatePrice(card.points);
+            const convertedPrice = window.currencyManager.convertFromUSD(usdPrice, currentCurrency);
+            
+            // Handle the BEST card differently (it has a span inside)
+            if (card.id === 'price-12000') {
+              element.innerHTML = `${symbol}${convertedPrice.toFixed(2)} ${currentCurrency} <span style="font-size: 0.7rem; background: var(--accent); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 4px; margin-left: 0.25rem; font-weight: 900;">BEST</span>`;
+            } else {
+              element.textContent = `${symbol}${convertedPrice.toFixed(2)} ${currentCurrency}`;
+            }
+          }
         });
       }
 
