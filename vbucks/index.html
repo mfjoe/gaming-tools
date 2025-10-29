@@ -1855,7 +1855,7 @@
         <nav class="breadcrumb-list" aria-label="Breadcrumb">
           <div class="breadcrumb-item">
             <a href="../../" class="breadcrumb-link logo-link">
-              <img src="../../assets/images/logo.svg" alt="Logo" style="height: 80px; width: auto;" />
+              <img src="../assets/images/logo.svg" alt="Logo" style="height: 80px; width: auto;" onerror="this.style.display='none';" />
             </a>
           </div>
           <div class="breadcrumb-item">
@@ -1986,25 +1986,25 @@
                 <span style="font-size: 1.5rem;">💎</span> Quick V-Bucks Conversion Guide
               </h2>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary); backdrop-filter: blur(5px);">
+                <div data-quick-tip style="background: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary); backdrop-filter: blur(5px);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">1,000 V-Bucks</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; font-family: Impact, sans-serif;">$8.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; font-family: Impact, sans-serif;">$7.99 USD</p>
                 </div>
-                <div style="background: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary); backdrop-filter: blur(5px);">
+                <div data-quick-tip style="background: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary); backdrop-filter: blur(5px);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">2,800 V-Bucks</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; font-family: Impact, sans-serif;">$22.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; font-family: Impact, sans-serif;">$19.99 USD</p>
                 </div>
-                <div style="background: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary); backdrop-filter: blur(5px);">
+                <div data-quick-tip style="background: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary); backdrop-filter: blur(5px);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">5,000 V-Bucks</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; font-family: Impact, sans-serif;">$36.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; font-family: Impact, sans-serif;">$31.99 USD</p>
                 </div>
-                <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--secondary); box-shadow: 0 2px 8px rgba(212, 176, 0, 0.2); backdrop-filter: blur(5px);">
+                <div data-quick-tip style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--secondary); box-shadow: 0 2px 8px rgba(212, 176, 0, 0.2); backdrop-filter: blur(5px);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">13,500 V-Bucks</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: var(--secondary); font-family: Impact, sans-serif;">$89.99 USD <span style="font-size: 0.7rem; background: var(--secondary); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 3px; margin-left: 0.25rem; font-weight: 900;">BEST</span></p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: var(--secondary); font-family: Impact, sans-serif;">$79.99 USD <span style="font-size: 0.7rem; background: var(--secondary); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 3px; margin-left: 0.25rem; font-weight: 900;">BEST</span></p>
                 </div>
               </div>
-              <p style="margin: 1rem 0 0; font-size: 0.85rem; color: var(--gray); text-align: center; font-style: italic; font-family: -apple-system, sans-serif;">
-                💡 Tip: The 13,500 package ($89.99) offers 25.8% better value per V-Buck than the 1,000 package
+              <p data-savings-tip style="margin: 1rem 0 0; font-size: 0.85rem; color: var(--gray); text-align: center; font-style: italic; font-family: -apple-system, sans-serif;">
+                💡 Tip: The 13,500 package ($79.99) offers 25.8% better value per V-Buck than the 1,000 package
               </p>
             </div>
           </section>
@@ -2335,8 +2335,7 @@
               font-size: 1rem;
             "
           >
-            Prices shown below are automatically converted to your selected
-            currency. Regional pricing may vary due to local taxes and fees.
+            Official Epic Games regional pricing. Prices are fixed by region and do not change based on exchange rates.
           </p>
           <table class="pricing-table">
             <thead>
@@ -2353,43 +2352,43 @@
               <tr>
                 <td>1,000 V-Bucks</td>
                 <td>$7.99</td>
-                <td>£6.24</td>
-                <td>€6.79</td>
-                <td>C$10.78</td>
-                <td>A$11.83</td>
+                <td>£6.49</td>
+                <td>€7.99</td>
+                <td>C$10.99</td>
+                <td>A$12.95</td>
               </tr>
               <tr>
                 <td>2,800 V-Bucks</td>
                 <td>$19.99</td>
-                <td>£15.59</td>
-                <td>€16.99</td>
-                <td>C$26.99</td>
-                <td>A$29.58</td>
+                <td>£15.99</td>
+                <td>€19.99</td>
+                <td>C$27.99</td>
+                <td>A$32.95</td>
               </tr>
               <tr>
                 <td>5,000 V-Bucks</td>
                 <td>$31.99</td>
-                <td>£24.95</td>
-                <td>€27.19</td>
-                <td>C$43.19</td>
-                <td>A$47.35</td>
+                <td>£25.99</td>
+                <td>€31.99</td>
+                <td>C$43.99</td>
+                <td>A$51.95</td>
               </tr>
               <tr>
                 <td>13,500 V-Bucks</td>
                 <td>$79.99</td>
-                <td>£62.39</td>
-                <td>€67.99</td>
-                <td>C$107.99</td>
-                <td>A$118.39</td>
+                <td>£64.99</td>
+                <td>€79.99</td>
+                <td>C$109.99</td>
+                <td>A$129.95</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- V-Bucks to USD Exchange Rate Table -->
+        <!-- V-Bucks to Currency Exchange Rate Table -->
         <div class="content-section">
-          <h2 class="section-title">V-Bucks to USD Exchange Rate Table</h2>
-          <table class="pricing-table">
+          <h2 data-exchange-rate-heading class="section-title">V-Bucks to USD Exchange Rate Table</h2>
+          <table data-exchange-rate-table class="pricing-table">
             <thead>
               <tr>
                 <th>V-Bucks</th>
@@ -2401,26 +2400,26 @@
             <tbody>
               <tr>
                 <td>1,000</td>
-                <td data-usd="7.99">$7.99</td>
-                <td data-usd="0.00799">$0.00799</td>
+                <td>$7.99</td>
+                <td>$0.00799</td>
                 <td>Single Items</td>
               </tr>
               <tr>
                 <td>2,800</td>
-                <td data-usd="19.99">$19.99</td>
-                <td data-usd="0.00714">$0.00714</td>
+                <td>$19.99</td>
+                <td>$0.00714</td>
                 <td>Battle Pass</td>
               </tr>
               <tr>
                 <td>5,000</td>
-                <td data-usd="31.99">$31.99</td>
-                <td data-usd="0.00640">$0.00640</td>
+                <td>$31.99</td>
+                <td>$0.00640</td>
                 <td>Skin Bundles</td>
               </tr>
               <tr>
                 <td>13,500</td>
-                <td data-usd="79.99">$79.99</td>
-                <td data-usd="0.00593">$0.00593</td>
+                <td>$79.99</td>
+                <td>$0.00593</td>
                 <td>Bulk Purchases</td>
               </tr>
             </tbody>
@@ -2746,35 +2745,67 @@
       let isUpdating = false;
       let currentCurrency = "USD";
 
-      // V-Bucks packages with current pricing (October 2023+)
-      const VBUCKS_PACKAGES = [
-        { vbucks: 1000, price: 8.99, perCoin: 111 },      // $0.00899 per V-Buck
-        { vbucks: 2800, price: 22.99, perCoin: 122 },     // $0.00821 per V-Buck
-        { vbucks: 5000, price: 36.99, perCoin: 135 },     // $0.00740 per V-Buck
-        { vbucks: 13500, price: 89.99, perCoin: 150 }     // $0.00667 per V-Buck (BEST)
-      ];
-
-      // Use best-value rate for estimates (13,500 package)
-      const BEST_RATE_PER_VBUCK = 0.00667;
-      const BEST_RATE_VBUCKS_PER_DOLLAR = 150;
+      // V-Bucks packages with regional pricing (Official Epic Games pricing)
+      const VBUCKS_PACKAGES = {
+        USD: [
+          { vbucks: 1000, price: 7.99, rate: 0.00799 },
+          { vbucks: 2800, price: 19.99, rate: 0.00714 },
+          { vbucks: 5000, price: 31.99, rate: 0.00640 },
+          { vbucks: 13500, price: 79.99, rate: 0.00593 }
+        ],
+        GBP: [
+          { vbucks: 1000, price: 6.49, rate: 0.00649 },
+          { vbucks: 2800, price: 15.99, rate: 0.00571 },
+          { vbucks: 5000, price: 25.99, rate: 0.00520 },
+          { vbucks: 13500, price: 64.99, rate: 0.00481 }
+        ],
+        EUR: [
+          { vbucks: 1000, price: 7.99, rate: 0.00799 },
+          { vbucks: 2800, price: 19.99, rate: 0.00714 },
+          { vbucks: 5000, price: 31.99, rate: 0.00640 },
+          { vbucks: 13500, price: 79.99, rate: 0.00593 }
+        ],
+        CAD: [
+          { vbucks: 1000, price: 10.99, rate: 0.01099 },
+          { vbucks: 2800, price: 27.99, rate: 0.00999 },
+          { vbucks: 5000, price: 43.99, rate: 0.00880 },
+          { vbucks: 13500, price: 109.99, rate: 0.00815 }
+        ],
+        AUD: [
+          { vbucks: 1000, price: 12.95, rate: 0.01295 },
+          { vbucks: 2800, price: 32.95, rate: 0.01177 },
+          { vbucks: 5000, price: 51.95, rate: 0.01039 },
+          { vbucks: 13500, price: 129.95, rate: 0.00963 }
+        ]
+      };
 
       // Conversion functions
-      function calculateVbucksPrice(vbucks) {
+      function calculateVbucksPrice(vbucks, currency) {
         if (vbucks <= 0) return 0;
         
-        // Check for exact package match
-        const exactPackage = VBUCKS_PACKAGES.find(pkg => pkg.vbucks === vbucks);
+        // Get packages for selected currency
+        const packages = VBUCKS_PACKAGES[currency] || VBUCKS_PACKAGES.USD;
+        
+        // Check for exact package match first
+        const exactPackage = packages.find(pkg => pkg.vbucks === vbucks);
         if (exactPackage) {
-          return exactPackage.price; // Return exact package price
+          return exactPackage.price;
         }
         
-        // For non-package amounts, use best-value rate
-        return Math.round(vbucks * BEST_RATE_PER_VBUCK * 100) / 100;
+        // For non-package amounts, use the best rate from the largest package
+        const bestRate = packages[packages.length - 1].rate;
+        return Math.round(vbucks * bestRate * 100) / 100;
       }
 
-      function calculateVbucksFromUSD(usdAmount) {
-        if (usdAmount <= 0) return 0;
-        return Math.round(usdAmount * BEST_RATE_VBUCKS_PER_DOLLAR);
+      function calculateVbucksFromCurrency(amount, currency) {
+        if (amount <= 0) return 0;
+        
+        // Get packages for selected currency
+        const packages = VBUCKS_PACKAGES[currency] || VBUCKS_PACKAGES.USD;
+        
+        // Use the best rate (largest package)
+        const bestRate = packages[packages.length - 1].rate;
+        return Math.round(amount / bestRate);
       }
 
       // DOM elements
@@ -2878,14 +2909,10 @@
         }
 
         const vbucks = validatedVbucks;
-        const usdValue = calculateVbucksPrice(vbucks);
-        const convertedValue = window.currencyManager.convertFromUSD(
-          usdValue,
-          currentCurrency
-        );
+        const currencyValue = calculateVbucksPrice(vbucks, currentCurrency);
 
         isUpdating = true;
-        usdInput.value = convertedValue.toFixed(2);
+        usdInput.value = currencyValue.toFixed(2);
         isUpdating = false;
 
         saveCalculation();
@@ -2908,11 +2935,7 @@
         }
 
         const inputValue = validatedInput;
-        const usdValue = window.currencyManager.convertToUSD(
-          inputValue,
-          currentCurrency
-        );
-        const vbucks = calculateVbucksFromUSD(usdValue);
+        const vbucks = calculateVbucksFromCurrency(inputValue, currentCurrency);
 
         isUpdating = true;
         vbucksInput.value = Math.round(vbucks);
@@ -2932,7 +2955,19 @@
         // Security: Validate input before setting
         const validatedAmount = SecurityManager.validateInput(amount);
         vbucksInput.value = validatedAmount;
-        handleVbucksInput();
+        
+        // Get exact package price for the selected currency
+        const packages = VBUCKS_PACKAGES[currentCurrency] || VBUCKS_PACKAGES.USD;
+        const packagePrice = packages.find(pkg => pkg.vbucks === parseInt(validatedAmount));
+        
+        if (packagePrice) {
+          isUpdating = true;
+          usdInput.value = packagePrice.price.toFixed(2);
+          isUpdating = false;
+          saveCalculation();
+        } else {
+          handleVbucksInput();
+        }
       }
 
       function handleCurrencyChange() {
@@ -2940,6 +2975,8 @@
         updateCurrencyLabel();
         updatePricingTables();
         updateCurrencyDisplay();
+        updateQuickTips(currentCurrency);
+        updateExchangeRateTable(currentCurrency);
 
         // Recalculate if there's input
         if (vbucksInput.value) {
@@ -2951,17 +2988,74 @@
       }
 
       function updatePricingTables() {
-        const symbol = window.currencyManager.getSymbol(currentCurrency);
+        // Pricing table is now static with fixed regional prices
+        // No conversion needed
+      }
 
-        // Update all cells with data-usd attributes
-        document.querySelectorAll("[data-usd]").forEach((cell) => {
-          const usdValue = parseFloat(cell.getAttribute("data-usd"));
-          const convertedValue = window.currencyManager.convertFromUSD(
-            usdValue,
-            currentCurrency
-          );
-          cell.textContent = `${symbol}${convertedValue.toFixed(2)}`;
-        });
+      function updateQuickTips(currency) {
+        const packages = VBUCKS_PACKAGES[currency] || VBUCKS_PACKAGES.USD;
+        const symbol = window.currencyManager.getSymbol(currency);
+        
+        // Update the 4 quick tip boxes
+        const quickTipBoxes = document.querySelectorAll('[data-quick-tip]');
+        if (quickTipBoxes.length >= 4) {
+          quickTipBoxes.forEach((box, index) => {
+            if (index < packages.length) {
+              const pkg = packages[index];
+              const priceElement = box.querySelector('p:last-child');
+              if (priceElement && index === 3) {
+                // Last box is the best deal
+                priceElement.innerHTML = `${symbol}${pkg.price.toFixed(2)} ${currency} <span style="font-size: 0.7rem; background: var(--secondary); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 3px; margin-left: 0.25rem; font-weight: 900;">BEST</span>`;
+              } else if (priceElement) {
+                priceElement.textContent = `${symbol}${pkg.price.toFixed(2)} ${currency}`;
+              }
+            }
+          });
+        }
+        
+        // Update the savings tip at the bottom
+        const savingsTip = document.querySelector('[data-savings-tip]');
+        if (savingsTip) {
+          const smallestRate = packages[0].rate;
+          const bestRate = packages[3].rate;
+          const savingsPercent = Math.round(((smallestRate - bestRate) / smallestRate) * 100);
+          savingsTip.textContent = `💡 Tip: The 13,500 package (${symbol}${packages[3].price.toFixed(2)}) offers ${savingsPercent}% better value per V-Buck than the 1,000 package`;
+        }
+      }
+
+      function updateExchangeRateTable(currency) {
+        const packages = VBUCKS_PACKAGES[currency] || VBUCKS_PACKAGES.USD;
+        const symbol = window.currencyManager.getSymbol(currency);
+        
+        // Update the table heading
+        const tableHeading = document.querySelector('[data-exchange-rate-heading]');
+        if (tableHeading) {
+          tableHeading.textContent = `V-Bucks to ${currency} Exchange Rate Table`;
+        }
+        
+        // Update table header to show currency instead of USD
+        const table = document.querySelector('[data-exchange-rate-table]');
+        if (table) {
+          const tableHeaders = table.querySelectorAll('thead th');
+          if (tableHeaders.length >= 2) {
+            tableHeaders[1].textContent = `${currency} Price`;
+          }
+          
+          // Update table rows
+          const tableRows = table.querySelectorAll('tbody tr');
+          tableRows.forEach((row, index) => {
+            if (index < packages.length) {
+              const pkg = packages[index];
+              const cells = row.querySelectorAll('td');
+              if (cells.length >= 3) {
+                // Update price cell
+                cells[1].textContent = `${symbol}${pkg.price.toFixed(2)}`;
+                // Update per V-Buck rate
+                cells[2].textContent = `${symbol}${pkg.rate.toFixed(5)}`;
+              }
+            }
+          });
+        }
       }
 
       function updateCurrencyLabel() {
@@ -3028,6 +3122,16 @@
       }
 
       async function initializeCurrency() {
+        // Ensure CurrencyManager is available
+        if (!window.currencyManager) {
+          if (typeof CurrencyManager !== 'undefined') {
+            window.currencyManager = new CurrencyManager();
+          } else {
+            console.error('CurrencyManager not loaded. Check that currency-utils.js is loading correctly.');
+            return; // Exit early if CurrencyManager isn't available
+          }
+        }
+        
         // Fetch latest exchange rates
         await window.currencyManager.fetchRates();
 
@@ -3045,6 +3149,8 @@
 
         updateCurrencyLabel();
         updateCurrencyDisplay();
+        updateQuickTips(currentCurrency);
+        updateExchangeRateTable(currentCurrency);
       }
 
       function showCurrencyDetectedMessage(currency) {
@@ -3098,50 +3204,42 @@
       // Better Deal Finder
       class DealFinder {
         constructor() {
-          this.packages = {
-            vbucks: [
-              { amount: 1000, price: 8.99, rate: 0.00899 },
-              { amount: 2800, price: 22.99, rate: 0.00821 },
-              { amount: 5000, price: 36.99, rate: 0.00740 },
-              { amount: 13500, price: 89.99, rate: 0.00667 },
-            ],
-          };
           this.dealFinder = document.getElementById("dealFinder");
           this.dealTip = document.getElementById("dealTip");
         }
 
         checkDeal(gameAmount, currencyAmount, currencyType) {
-          const packages = this.packages.vbucks;
+          // Get packages for selected currency
+          const packages = VBUCKS_PACKAGES[currencyType] || VBUCKS_PACKAGES.USD;
+          const symbol = window.currencyManager.getSymbol(currencyType);
           let bestDeal = null;
 
           // Check if user is close to a better package
           for (let i = 0; i < packages.length; i++) {
             const pkg = packages[i];
 
-            if (gameAmount >= pkg.amount * 0.8 && gameAmount < pkg.amount) {
+            if (gameAmount >= pkg.vbucks * 0.8 && gameAmount < pkg.vbucks) {
               // User is 80%+ of the way to a package
-              const needed = pkg.amount - gameAmount;
-              const neededPrice = (needed * pkg.price) / pkg.amount;
+              const needed = pkg.vbucks - gameAmount;
+              const neededPrice = (needed * pkg.price) / pkg.vbucks;
               bestDeal = {
                 type: "upgrade",
-                message: `💡 Tip: For just ${needed.toLocaleString()} more V-Bucks, you get better value with the ${pkg.amount.toLocaleString()} package`,
-                savings: pkg.amount - gameAmount,
+                message: `💡 Tip: For just ${needed.toLocaleString()} more V-Bucks, you get better value with the ${pkg.vbucks.toLocaleString()} package for ${symbol}${pkg.price.toFixed(2)}`,
+                savings: pkg.vbucks - gameAmount,
               };
               break;
             } else if (
-              gameAmount > pkg.amount &&
-              gameAmount < packages[i + 1]?.amount
+              gameAmount > pkg.vbucks &&
+              gameAmount < packages[i + 1]?.vbucks
             ) {
               // User is between packages
               const nextPkg = packages[i + 1];
               if (nextPkg) {
                 const additionalCost = nextPkg.price - pkg.price;
-                const additionalVbucks = nextPkg.amount - pkg.amount;
+                const additionalVbucks = nextPkg.vbucks - pkg.vbucks;
                 bestDeal = {
                   type: "better",
-                  message: `💡 Better Deal: The ${nextPkg.amount.toLocaleString()} package gives you ${additionalVbucks.toLocaleString()} bonus V-Bucks for only ${window.currencyManager.getSymbol(
-                    currencyType
-                  )}${additionalCost.toFixed(2)} more`,
+                  message: `💡 Better Deal: The ${nextPkg.vbucks.toLocaleString()} package gives you ${additionalVbucks.toLocaleString()} bonus V-Bucks for only ${symbol}${additionalCost.toFixed(2)} more`,
                   savings: additionalVbucks,
                 };
               }
@@ -3169,13 +3267,19 @@
       // Initialize features
       let dealFinder;
 
-      // Initialize CurrencyManager
-      window.currencyManager = new CurrencyManager();
+      // CurrencyManager is already initialized by currency-utils.js
+      // Ensure it exists, or create fallback
+      if (!window.currencyManager && typeof CurrencyManager !== 'undefined') {
+        window.currencyManager = new CurrencyManager();
+      }
 
       // Initialize after currency system is ready
       async function initializeFeatures() {
         // Currency manager is already initialized by initializeCurrency()
         dealFinder = new DealFinder();
+        // Initialize dynamic content
+        updateQuickTips(currentCurrency);
+        updateExchangeRateTable(currentCurrency);
       }
 
       // Deal tracking is now integrated directly into the original functions

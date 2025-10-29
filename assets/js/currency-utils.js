@@ -31,43 +31,71 @@ class CurrencyManager {
     }
 
     try {
-      let response;
-
       // Skip serverless function in development/local environment
       const isLocalDevelopment =
         window.location.hostname === "localhost" ||
         window.location.hostname === "127.0.0.1" ||
         window.location.protocol === "file:";
 
+      // Try multiple path variations for different directory structures
+      // Note: Exchange rates are not critical since we're using regional pricing
+      const possiblePaths = [
+        "../api/exchange-rates.json",     // From vbucks/ or root calculator directory
+        "../../api/exchange-rates.json",  // From deeper subdirectories
+        "/api/exchange-rates.json",       // Absolute path from server root
+        "./api/exchange-rates.json",      // Same directory as HTML
+        "api/exchange-rates.json",        // Relative to current page location
+      ];
+
+      let response = null;
+      let lastError = null;
+
       if (isLocalDevelopment) {
-        response = await fetch("../../api/exchange-rates.json", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        // Try each path until one works
+        for (const path of possiblePaths) {
+          try {
+            response = await fetch(path, {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            });
+            if (response.ok) break;
+          } catch (err) {
+            lastError = err;
+            continue;
+          }
+        }
       } else {
         // Try the serverless function first in production
-        response = await fetch("/api/exchange-rates", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        // If serverless function fails, try the static JSON file
-        if (!response.ok) {
-          response = await fetch("../../api/exchange-rates.json", {
+        try {
+          response = await fetch("/api/exchange-rates", {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
             },
           });
+        } catch (err) {
+          // If serverless function fails, try the static JSON file paths
+          for (const path of possiblePaths) {
+            try {
+              response = await fetch(path, {
+                method: "GET",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+              if (response.ok) break;
+            } catch (fetchErr) {
+              lastError = fetchErr;
+              continue;
+            }
+          }
         }
       }
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+      if (!response || !response.ok) {
+        throw new Error(`HTTP ${response ? response.status : 'Network Error'}`);
       }
 
       const data = await response.json();
@@ -79,7 +107,13 @@ class CurrencyManager {
         console.warn("Using fallback rates:", data.error);
       }
     } catch (error) {
-      console.error("Failed to fetch exchange rates:", error);
+      // Silently fail in development/local - exchange rates not critical for regional pricing
+      // Only log warnings in production or if explicitly debugging
+      if (window.location.hostname !== "localhost" && 
+          window.location.hostname !== "127.0.0.1" &&
+          window.location.protocol !== "file:") {
+        console.warn("Failed to fetch exchange rates:", error, "- Using default rates");
+      }
       // Keep existing rates as fallback
     }
 
