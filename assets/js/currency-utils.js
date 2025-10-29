@@ -107,13 +107,7 @@ class CurrencyManager {
         console.warn("Using fallback rates:", data.error);
       }
     } catch (error) {
-      // Silently fail in development/local - exchange rates not critical for regional pricing
-      // Only log warnings in production or if explicitly debugging
-      if (window.location.hostname !== "localhost" && 
-          window.location.hostname !== "127.0.0.1" &&
-          window.location.protocol !== "file:") {
-        console.warn("Failed to fetch exchange rates:", error, "- Using default rates");
-      }
+      // Silently fail - exchange rates not critical for regional pricing
       // Keep existing rates as fallback
     }
 

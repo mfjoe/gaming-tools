@@ -2691,13 +2691,8 @@
       // Conversion arrow functionality - swap between Robux and USD inputs
       const conversionArrow = document.querySelector(".conversion-arrow");
 
-      console.log("Conversion arrow element:", conversionArrow);
-
       if (conversionArrow) {
-        console.log("Adding click event listener to conversion arrow");
-
         conversionArrow.addEventListener("click", (e) => {
-          console.log("Conversion arrow clicked - swapping values!");
           e.preventDefault();
 
           // Simply swap the input values
@@ -2709,11 +2704,7 @@
           
           // Trigger recalculation
           handleRobuxInput();
-          
-          console.log("Values swapped");
         });
-      } else {
-        console.error("Conversion arrow element not found!");
       }
 
       // Initialize currency and rate display
