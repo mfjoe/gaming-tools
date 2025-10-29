@@ -2132,7 +2132,7 @@
             <!-- 1,100 CP - Battle Pass Tier -->
             <button onclick="setQuickAmount(1100)" style="padding: 1rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(255, 149, 0, 0.3)); border: 2px solid rgba(255, 107, 53, 0.6); color: var(--white); font-weight: 700; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; text-align: center; backdrop-filter: blur(5px);">
               <div style="font-size: 1.3rem; margin-bottom: 0.25rem;">1,100 CP</div>
-              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">$9.99</div>
+              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;"><span id="quick-price-1100">$9.99</span></div>
               <div style="font-size: 0.7rem; background: rgba(255, 184, 0, 0.3); padding: 0.15rem 0.4rem; border-radius: 3px; display: inline-block; color: #ffb800; font-weight: 800;">+100 BONUS</div>
               <div style="font-size: 0.65rem; color: #ffb800; margin-top: 0.25rem; font-weight: 600;">⭐ BATTLE PASS</div>
             </button>
@@ -2140,7 +2140,7 @@
             <!-- 2,400 CP -->
             <button onclick="setQuickAmount(2400)" style="padding: 1rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(255, 149, 0, 0.3)); border: 2px solid rgba(255, 107, 53, 0.6); color: var(--white); font-weight: 700; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; text-align: center; backdrop-filter: blur(5px);">
               <div style="font-size: 1.3rem; margin-bottom: 0.25rem;">2,400 CP</div>
-              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">$19.99</div>
+              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;"><span id="quick-price-2400">$19.99</span></div>
               <div style="font-size: 0.7rem; background: rgba(255, 184, 0, 0.3); padding: 0.15rem 0.4rem; border-radius: 3px; display: inline-block; color: #ffb800; font-weight: 800;">+400 BONUS</div>
               <div style="font-size: 0.65rem; color: var(--gray); margin-top: 0.25rem;">16% savings</div>
             </button>
@@ -2148,7 +2148,7 @@
             <!-- 5,000 CP -->
             <button onclick="setQuickAmount(5000)" style="padding: 1rem; background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(255, 149, 0, 0.3)); border: 2px solid rgba(255, 107, 53, 0.6); color: var(--white); font-weight: 700; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; text-align: center; backdrop-filter: blur(5px);">
               <div style="font-size: 1.3rem; margin-bottom: 0.25rem;">5,000 CP</div>
-              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">$39.99</div>
+              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;"><span id="quick-price-5000">$39.99</span></div>
               <div style="font-size: 0.7rem; background: rgba(255, 184, 0, 0.3); padding: 0.15rem 0.4rem; border-radius: 3px; display: inline-block; color: #ffb800; font-weight: 800;">+1000 BONUS</div>
               <div style="font-size: 0.65rem; color: var(--gray); margin-top: 0.25rem;">20% savings</div>
             </button>
@@ -2156,7 +2156,7 @@
             <!-- 13,000 CP - BEST VALUE -->
             <button onclick="setQuickAmount(13000)" style="padding: 1rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.4), rgba(255, 149, 0, 0.4)); border: 2px solid #ffb800; color: var(--white); font-weight: 700; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; text-align: center; backdrop-filter: blur(5px); box-shadow: 0 0 15px rgba(255, 184, 0, 0.4);">
               <div style="font-size: 1.3rem; margin-bottom: 0.25rem;">13,000 CP</div>
-              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;">$99.99</div>
+              <div style="font-size: 0.75rem; color: var(--gray); margin-bottom: 0.25rem;"><span id="quick-price-13000">$99.99</span></div>
               <div style="font-size: 0.7rem; background: rgba(255, 184, 0, 0.5); padding: 0.15rem 0.4rem; border-radius: 3px; display: inline-block; color: #ffb800; font-weight: 800;">+3000 BONUS</div>
               <div style="font-size: 0.65rem; color: #ffb800; margin-top: 0.25rem; font-weight: 600;">⭐ BEST VALUE - 23% OFF</div>
             </button>
@@ -2184,20 +2184,20 @@
               </h2>
               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                 <div style="background: rgba(13, 13, 13, 0.8); padding: 1rem; border-radius: 0; border-left: 4px solid var(--secondary); backdrop-filter: blur(5px); border: 1px solid rgba(107, 124, 89, 0.4); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
-                  <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">1,000 COD Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(255, 107, 53, 0.5);">$9.99 USD</p>
+                  <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">1,100 COD Points</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(255, 107, 53, 0.5);"><span id="guide-price-1100">$9.99 USD</span></p>
                 </div>
                 <div style="background: rgba(13, 13, 13, 0.8); padding: 1rem; border-radius: 0; border-left: 4px solid var(--secondary); backdrop-filter: blur(5px); border: 1px solid rgba(107, 124, 89, 0.4); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">2,400 COD Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(255, 107, 53, 0.5);">$19.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(255, 107, 53, 0.5);"><span id="guide-price-2400">$19.99 USD</span></p>
                 </div>
                 <div style="background: rgba(13, 13, 13, 0.8); padding: 1rem; border-radius: 0; border-left: 4px solid var(--secondary); backdrop-filter: blur(5px); border: 1px solid rgba(107, 124, 89, 0.4); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">5,000 COD Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(255, 107, 53, 0.5);">$39.99 USD</p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: #ffffff; text-shadow: 0 2px 4px rgba(255, 107, 53, 0.5);"><span id="guide-price-5000">$39.99 USD</span></p>
                 </div>
                 <div style="background: rgba(13, 13, 13, 0.9); padding: 1rem; border-radius: 0; border-left: 4px solid var(--accent); box-shadow: 0 0 12px rgba(255, 184, 0, 0.3); backdrop-filter: blur(5px); border: 1px solid rgba(255, 184, 0, 0.5);">
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray); font-weight: 600; font-family: -apple-system, sans-serif;">13,000 COD Points</p>
-                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: var(--accent); text-shadow: 0 2px 4px rgba(255, 184, 0, 0.6);">$99.99 USD <span style="font-size: 0.7rem; background: var(--accent); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 0; margin-left: 0.25rem; font-weight: 900;">BEST</span></p>
+                  <p style="margin: 0.25rem 0 0; font-size: 1.3rem; font-weight: 900; color: var(--accent); text-shadow: 0 2px 4px rgba(255, 184, 0, 0.6);"><span id="guide-price-13000">$99.99 USD</span> <span style="font-size: 0.7rem; background: var(--accent); color: var(--dark); padding: 0.2rem 0.4rem; border-radius: 0; margin-left: 0.25rem; font-weight: 900;">BEST</span></p>
                 </div>
               </div>
               <p style="margin: 1rem 0 0; font-size: 0.85rem; color: var(--gray); text-align: center; font-style: italic; font-family: -apple-system, sans-serif; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">
@@ -3381,6 +3381,104 @@
         { total: 9500, price: 74.99, displayName: "9,500 COD Points", base: 9500, bonus: 0 },
         { total: 13000, price: 99.99, displayName: "13,000 COD Points", base: 13000, bonus: 0 }
       ];
+
+      // Regional pricing data for multi-currency support
+      const COD_CURRENCY_PRICES = {
+        USD: {
+          symbol: '$',
+          prices: {
+            200: 1.99,
+            500: 4.99,
+            1100: 9.99,
+            2400: 19.99,
+            5000: 39.99,
+            13000: 99.99
+          }
+        },
+        GBP: {
+          symbol: '£',
+          prices: {
+            200: 1.79,
+            500: 4.29,
+            1100: 8.50,
+            2400: 16.79,
+            5000: 34.99,
+            13000: 84.99
+          }
+        },
+        EUR: {
+          symbol: '€',
+          prices: {
+            200: 1.99,
+            500: 4.99,
+            1100: 9.99,
+            2400: 19.99,
+            5000: 39.99,
+            13000: 99.99
+          }
+        },
+        CAD: {
+          symbol: 'C$',
+          prices: {
+            200: 2.99,
+            500: 6.99,
+            1100: 13.49,
+            2400: 26.99,
+            5000: 53.49,
+            13000: 134.99
+          }
+        },
+        AUD: {
+          symbol: 'A$',
+          prices: {
+            200: 3.19,
+            500: 7.55,
+            1100: 15.45,
+            2400: 30.95,
+            5000: 61.95,
+            13000: 150.45
+          }
+        }
+      };
+
+      // Update COD Points prices in UI based on selected currency
+      function updateCODPricesUI(currency) {
+        const currencyData = COD_CURRENCY_PRICES[currency];
+        if (!currencyData) return;
+        
+        const symbol = currencyData.symbol;
+        const prices = currencyData.prices;
+        
+        // Update quick amount buttons
+        const quickPriceElements = {
+          1100: document.getElementById('quick-price-1100'),
+          2400: document.getElementById('quick-price-2400'),
+          5000: document.getElementById('quick-price-5000'),
+          13000: document.getElementById('quick-price-13000')
+        };
+        
+        Object.keys(quickPriceElements).forEach(amount => {
+          const element = quickPriceElements[amount];
+          if (element && prices[amount]) {
+            element.textContent = `${symbol}${prices[amount].toFixed(2)}`;
+          }
+        });
+        
+        // Update quick conversion guide
+        const guidePriceElements = {
+          1100: document.getElementById('guide-price-1100'),
+          2400: document.getElementById('guide-price-2400'),
+          5000: document.getElementById('guide-price-5000'),
+          13000: document.getElementById('guide-price-13000')
+        };
+        
+        Object.keys(guidePriceElements).forEach(amount => {
+          const element = guidePriceElements[amount];
+          if (element && prices[amount]) {
+            element.textContent = `${symbol}${prices[amount].toFixed(2)} ${currency}`;
+          }
+        });
+      }
       
       // Best value rate for estimates (13,000 package rate)
       const BEST_COD_RATE = 99.99 / 13000; // $0.007692 per COD Point
@@ -3394,17 +3492,25 @@
       }
 
       function calculateCodToUSD(points) {
-        // First, check if the amount matches an exact package
-        const exactPackage = findExactPackage(points);
+        const currencyData = COD_CURRENCY_PRICES[currentCurrency];
         
-        if (exactPackage) {
-          // Exact package match - return the exact price
-          return exactPackage.price;
+        if (!currencyData) {
+          // Fallback if currency not found
+          return points * BEST_COD_RATE;
         }
         
-        // No exact match - estimate using best value rate
-        // Use BEST_COD_RATE (0.007692) for the most favorable estimate
-        return points * BEST_COD_RATE;
+        const prices = currencyData.prices;
+        
+        // Check for exact package match - this must match the keys in prices object
+        const exactPrice = prices[points];
+        if (exactPrice !== undefined) {
+          return exactPrice;
+        }
+        
+        // For non-exact amounts, calculate based on best value rate
+        // Use the 13000 package as the base rate
+        const bestRate = prices[13000] / 13000;
+        return points * bestRate;
       }
 
       function getPackageInfo(points) {
@@ -3432,11 +3538,18 @@
         };
       }
 
-      function calculateUSDtoCod(dollars) {
-        // Use the best value rate for conversion (13,000 CP package rate)
-        // This gives users the most favorable estimate
-        const points = dollars / BEST_COD_RATE;
-        return Math.round(points); // Round to nearest whole number
+      function calculateUSDtoCod(currencyAmount) {
+        const currencyData = COD_CURRENCY_PRICES[currentCurrency];
+        if (!currencyData) {
+          return Math.round(currencyAmount / BEST_COD_RATE);
+        }
+        
+        const prices = currencyData.prices;
+        
+        // Use the best value rate (13000 package)
+        const bestRate = prices[13000] / 13000;
+        const points = currencyAmount / bestRate;
+        return Math.round(points);
       }
 
       function suggestOptimalPackage(dollars) {
@@ -3559,14 +3672,12 @@
         }
 
         const codPoints = validatedCod;
-        const usdValue = calculateCodToUSD(codPoints);
-        const convertedValue = window.currencyManager.convertFromUSD(
-          usdValue,
-          currentCurrency
-        );
+        
+        // Use native currency price instead of converting from USD
+        const currencyValue = calculateCodToUSD(codPoints); // This now returns the actual currency value
 
         isUpdating = true;
-        usdInput.value = convertedValue.toFixed(2);
+        usdInput.value = currencyValue.toFixed(2);
         isUpdating = false;
 
         saveCalculation();
@@ -3589,11 +3700,9 @@
         }
 
         const inputValue = validatedInput;
-        const usdValue = window.currencyManager.convertToUSD(
-          inputValue,
-          currentCurrency
-        );
-        const codPoints = calculateUSDtoCod(usdValue);
+        
+        // Use native currency calculation instead of converting to USD first
+        const codPoints = calculateUSDtoCod(inputValue); // This now works with actual currency
 
         isUpdating = true;
         codInput.value = codPoints;
@@ -3620,12 +3729,13 @@
         currentCurrency = currencySelect.value;
         updateCurrencyLabel();
         updatePricingTables();
-
+        updateCODPricesUI(currentCurrency); // Add this line
+        
         // Recalculate if there's input
         if (codInput.value) {
           handleCodInput();
         }
-
+        
         // Save currency preference
         window.currencyManager.saveCurrency(currentCurrency);
       }
@@ -3837,6 +3947,7 @@
       document.addEventListener("DOMContentLoaded", async function () {
         await initializeCurrency();
         updatePricingTables();
+        updateCODPricesUI(currentCurrency); // Add this line
         loadSavedCalculation();
         initializeFeatures();
       });
