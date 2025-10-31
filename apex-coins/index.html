@@ -786,10 +786,10 @@
       /* Currency Selector */
       .currency-selector {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 1rem;
         margin-bottom: 2rem;
         background: rgba(26, 32, 44, 0.8);
         border: 2px solid var(--secondary);
@@ -841,6 +841,7 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
+        flex: 0 0 auto;
       }
 
       .currency-label {
@@ -850,6 +851,72 @@
         text-transform: uppercase;
         letter-spacing: 0.15em;
         text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+      }
+
+      /* EA Play Toggle Button */
+      .ea-play-toggle-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+      }
+
+      .ea-play-toggle {
+        position: relative;
+        width: 56px;
+        height: 28px;
+        background: rgba(255, 140, 0, 0.2);
+        border: 2px solid rgba(255, 140, 0, 0.4);
+        border-radius: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+        outline: none;
+      }
+
+      .ea-play-toggle:hover {
+        border-color: rgba(255, 140, 0, 0.6);
+        box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+      }
+
+      .ea-play-toggle[aria-checked="true"] {
+        background: rgba(255, 140, 0, 0.4);
+        border-color: #ff8c00;
+        box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+      }
+
+      .ea-play-toggle-slider {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 140, 0, 0.6);
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .ea-play-toggle[aria-checked="true"] .ea-play-toggle-slider {
+        transform: translateX(28px);
+        background: #ff8c00;
+        box-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+      }
+
+      .ea-play-toggle-label {
+        white-space: nowrap;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--white);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-left: 0.75rem;
+      }
+
+      .ea-play-info-icon {
+        color: #ff8c00;
+        font-size: 1rem;
+        cursor: help;
       }
 
       .currency-dropdown {
@@ -1485,16 +1552,17 @@
         body {
           overflow-x: hidden;
           max-width: 100vw;
-          padding-top: 60px;
+          padding-top: 0;
         }
 
         .mobile-header {
-          display: flex;
+          display: none !important;
         }
 
-        /* Hide desktop breadcrumb */
-        .breadcrumb {
-          display: none;
+        /* Hide desktop breadcrumb and navbar on mobile */
+        .breadcrumb,
+        nav {
+          display: none !important;
         }
 
         /* Hide ALL content sections on mobile */
@@ -1555,6 +1623,11 @@
           );
         }
 
+        .calculator-header::before,
+        .calculator-header::after {
+          display: none !important;
+        }
+
         .calculator-header > div {
           flex-direction: row !important;
           gap: 8px !important;
@@ -1590,15 +1663,15 @@
         /* Compact inline currency selector with cyberpunk colors */
         .currency-selector {
           background: rgba(26, 32, 44, 0.8);
-          border: 2px solid var(--secondary);
+          border: 1px solid var(--secondary);
           border-radius: 0;
-          padding: 10px 12px;
+          padding: 4px 6px;
           margin-bottom: 12px;
           box-shadow: var(--glow-cyan);
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 10px;
+          gap: 3px;
           clip-path: polygon(
             0 0,
             calc(100% - 8px) 0,
@@ -1622,29 +1695,58 @@
         .currency-selector-wrapper {
           flex-direction: row;
           align-items: center;
-          gap: 10px;
-          width: 100%;
+          gap: 3px;
         }
 
         .currency-label {
-          font-size: 0.85rem;
+          font-size: 0.65rem !important;
           font-weight: 700;
           color: var(--white);
           white-space: nowrap;
           text-transform: uppercase;
-          letter-spacing: 0.1em;
+          letter-spacing: 0.03em;
+        }
+
+        /* EA Play Toggle Mobile Styles */
+        .ea-play-toggle-wrapper {
+          gap: 2px;
+          flex-shrink: 0;
+        }
+
+        .ea-play-toggle {
+          width: 36px;
+          height: 18px;
+        }
+
+        .ea-play-toggle-slider {
+          width: 12px;
+          height: 12px;
+        }
+
+        .ea-play-toggle[aria-checked="true"] .ea-play-toggle-slider {
+          transform: translateX(16px);
+        }
+
+        .ea-play-toggle-label {
+          font-size: 0.6rem !important;
+          margin-left: 0.25rem;
+        }
+
+        .ea-play-info-icon {
+          font-size: 0.65rem !important;
         }
 
         .currency-dropdown {
-          flex: 1;
-          height: 44px;
-          font-size: 16px;
-          padding: 10px 32px 10px 12px;
-          border: 2px solid var(--secondary);
+          flex: 0 1 auto !important;
+          max-width: 140px !important;
+          height: 26px !important;
+          font-size: 11px !important;
+          padding: 4px 20px 4px 6px !important;
+          border: 1px solid var(--secondary);
           border-radius: 0;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%2300d4ff' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
           background-repeat: no-repeat;
-          background-position: right 10px center;
+          background-position: right 6px center !important;
           background-color: var(--dark);
           color: var(--secondary);
           font-weight: 700;
@@ -1812,6 +1914,11 @@
           font-size: 16px !important;
         }
 
+        /* Override for currency dropdown - needs to be smaller */
+        .currency-dropdown {
+          font-size: 11px !important;
+        }
+
         /* Ensure everything fits on one screen */
         .calculator-header p {
           margin: 0;
@@ -1844,13 +1951,13 @@
         }
 
         .currency-dropdown {
-          height: 42px;
-          font-size: 15px;
-          padding: 8px 28px 8px 10px;
+          height: 26px !important;
+          font-size: 11px !important;
+          padding: 4px 20px 4px 6px !important;
         }
 
         .currency-label {
-          font-size: 0.8rem;
+          font-size: 0.65rem !important;
         }
       }
 
@@ -2371,6 +2478,14 @@
                 <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
               </select>
             </div>
+            <!-- EA Play Toggle -->
+            <div class="ea-play-toggle-wrapper">
+              <button id="eaPlayToggle" class="ea-play-toggle" type="button" role="switch" aria-checked="false">
+                <span class="ea-play-toggle-slider"></span>
+              </button>
+              <span class="ea-play-toggle-label">EA Play Member</span>
+              <span class="ea-play-info-icon" title="EA Play members get 10% off all Apex Coins purchases!">ℹ️</span>
+            </div>
           </div>
 
           <div class="conversion-section">
@@ -2650,38 +2765,7 @@
           </div>
         </div>
 
-        <!-- EA Play Discount Toggle -->
-        <div style="max-width: 900px; margin: 2rem auto; padding: 0 1.5rem;">
-          <div style="background: rgba(255, 140, 0, 0.08); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 140, 0, 0.3); backdrop-filter: blur(10px);">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
-              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: #ffffff; font-weight: 600; font-size: 1.1rem;">
-                <input type="checkbox" id="eaPlayToggle" style="width: 20px; height: 20px; accent-color: #ff8c00;">
-                EA Play Member
-              </label>
-              <div style="position: relative; display: inline-block;">
-                <span style="color: #ff8c00; font-size: 1.2rem; cursor: help;" title="EA Play members get 10% off all Apex Coins purchases!">ℹ️</span>
-              </div>
-            </div>
-            
-            <div id="eaPlayMessage" style="display: none; text-align: center; margin-bottom: 1rem;">
-              <p style="color: #ff8c00; font-weight: 700; margin: 0; font-size: 1.1rem;">🎮 EA Play members get 10% off all Apex Coins purchases!</p>
-            </div>
-            
-            <div id="eaPlayInfo" style="display: none; background: rgba(255, 140, 0, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid #ff8c00; margin-top: 1rem;">
-              <h4 style="color: #ffffff; margin-bottom: 0.5rem; font-size: 1rem; font-weight: 700;">EA Play Benefits</h4>
-              <p style="color: var(--gray); margin: 0; font-size: 0.9rem; line-height: 1.6;">
-                <strong>Cost:</strong> $5.99/month or $39.99/year<br>
-                <strong>Discount:</strong> 10% off all Apex Coins purchases on all platforms<br>
-                <strong>Break-even:</strong> After purchasing ~4,000-5,000 Apex Coins per year
-              </p>
-              
-              <div style="background: rgba(255, 140, 0, 0.2); padding: 0.8rem; border-radius: 6px; margin-top: 0.8rem; border: 1px solid rgba(255, 140, 0, 0.4);">
-                <p style="color: #ffffff; margin: 0; font-size: 0.9rem; font-weight: 600; text-align: center;">
-                  💰 <strong>Maximum Savings:</strong> With EA Play, buying the 11,500 package saves you $10.00 + the 12.9% bulk discount = <span style="color: #ff8c00;">total $24.78 savings</span> vs buying 500-coin packages!
-                </p>
-              </div>
-            </div>
-          </div>
+        <!-- EA Play Discount Info Section (removed - toggle moved to currency selector) -->
         </div>
 
         <!-- Package Warning for Non-Package Amounts -->
@@ -3681,23 +3765,16 @@
       
       function updateEAPlayDisplay() {
         const eaPlayToggle = document.getElementById('eaPlayToggle');
-        const eaPlayMessage = document.getElementById('eaPlayMessage');
-        const eaPlayInfo = document.getElementById('eaPlayInfo');
         
         if (eaPlayToggle) {
-          isEAPlayMember = eaPlayToggle.checked;
-          
-          if (isEAPlayMember) {
-            eaPlayMessage.style.display = 'block';
-            eaPlayInfo.style.display = 'block';
-          } else {
-            eaPlayMessage.style.display = 'none';
-            eaPlayInfo.style.display = 'none';
-          }
+          // Toggle the aria-checked attribute
+          const isChecked = eaPlayToggle.getAttribute('aria-checked') === 'true';
+          eaPlayToggle.setAttribute('aria-checked', !isChecked);
+          isEAPlayMember = !isChecked;
           
           // Recalculate current values if inputs have values
-          const apexInput = document.getElementById('apexInput');
-          const usdInput = document.getElementById('usdInput');
+          const apexInput = document.getElementById('apex-input');
+          const usdInput = document.getElementById('usd-input');
           
           if (apexInput && apexInput.value) {
             handleApexInput();
@@ -3706,7 +3783,9 @@
           }
           
           // Update all tables to reflect EA Play prices
-          updateAllTables();
+          if (typeof updateAllTables === 'function') {
+            updateAllTables();
+          }
         }
       }
       
@@ -4045,7 +4124,7 @@
       // EA Play toggle event listener
       const eaPlayToggle = document.getElementById('eaPlayToggle');
       if (eaPlayToggle) {
-        eaPlayToggle.addEventListener('change', updateEAPlayDisplay);
+        eaPlayToggle.addEventListener('click', updateEAPlayDisplay);
       }
 
       quickBtns.forEach((btn) => {

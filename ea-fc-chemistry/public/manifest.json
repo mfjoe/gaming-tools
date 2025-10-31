@@ -1,0 +1,18 @@
+{
+  "name": "EA FC 25 Squad Builder",
+  "short_name": "Squad Builder",
+  "description": "Build your perfect EA FC 25 Ultimate Team squad",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a472a",
+  "theme_color": "#1a472a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
+
